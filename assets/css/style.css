@@ -295,6 +295,18 @@ legend { font-family: var(--font-display); font-size: var(--step-2); padding: 0 
 .photo-caption { font-size: var(--step--1); color: var(--grey); margin-top: 0.6em; }
 .grid-2 img.inline-photo { align-self: start; }
 
+/* Image nested at the top of one column in a two-column text section */
+.col-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; margin: 0 0 1.25rem; }
+
+/* Image floated within a single running block of prose, text wraps around it */
+.aside-photo {
+  float: right; width: 42%; max-width: 320px; aspect-ratio: 4/3; object-fit: cover;
+  margin: 0.3rem 0 1.25rem 1.75rem;
+}
+@media (max-width: 640px) {
+  .aside-photo { float: none; width: 100%; max-width: none; margin: 0 0 1.5rem; }
+}
+
 /* ---- Breadcrumbs --------------------------------------------------------------*/
 .breadcrumbs { font-size: var(--step--1); color: var(--grey); padding-top: 1.6rem; }
 .breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4em; padding: 0; margin: 0; }
