@@ -84,6 +84,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   padding-inline: var(--gutter);
 }
 .section { padding-block: clamp(3.5rem, 8vw, 7rem); }
+.section[id] { scroll-margin-top: 96px; }
 .section--tight { padding-block: clamp(2.5rem, 5vw, 4rem); }
 .section--ink { background: var(--ink); color: var(--paper); }
 .section--ink h2, .section--ink h3 { color: var(--paper); }
