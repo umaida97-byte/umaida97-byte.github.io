@@ -181,7 +181,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   min-height: min(88vh, 780px);
   display: flex; align-items: flex-end;
   color: var(--white);
-  background: linear-gradient(180deg, rgba(27,26,24,0.35) 0%, rgba(27,26,24,0.78) 100%), var(--ink) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000"><rect width="1600" height="1000" fill="%232b2925"/></svg>') center/cover;
+  background-color: var(--ink);
+  background-image: linear-gradient(180deg, rgba(27,26,24,0.35) 0%, rgba(27,26,24,0.82) 100%), var(--hero-img, none);
+  background-size: cover;
+  background-position: center;
+}
+.hero-page {
+  min-height: min(52vh, 420px);
 }
 .hero-inner { padding-block: clamp(3rem, 9vw, 6rem); }
 .hero-kicker { font-size: var(--step--1); letter-spacing: 0.02em; color: var(--stone); margin-bottom: 1em; font-weight: 600; }
@@ -279,6 +285,15 @@ legend { font-family: var(--font-display); font-size: var(--step-2); padding: 0 
 .property-card .pc-price { font-family: var(--font-display); font-size: var(--step-2); margin: 0 0 0.15em; }
 .property-card .pc-address { color: var(--grey); font-size: var(--step--1); margin-bottom: 0.7em; }
 .property-card .pc-meta { display: flex; gap: 1rem; font-size: var(--step--1); color: var(--ink-soft); }
+
+/* ---- Content imagery ------------------------------------------------------*/
+.feature-image {
+  width: 100%; aspect-ratio: 16/9; object-fit: cover; margin: 0 0 2.5rem;
+}
+.feature-image--wide { aspect-ratio: 21/9; }
+.inline-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.photo-caption { font-size: var(--step--1); color: var(--grey); margin-top: 0.6em; }
+.grid-2 img.inline-photo { align-self: start; }
 
 /* ---- Breadcrumbs --------------------------------------------------------------*/
 .breadcrumbs { font-size: var(--step--1); color: var(--grey); padding-top: 1.6rem; }

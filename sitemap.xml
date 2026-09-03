@@ -2,47 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://five-towns.co.uk/</loc></url>
   <url><loc>https://five-towns.co.uk/about.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/abbey-hulton.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/alsager.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/bentilee.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/blurton.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/bucknall.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/burslem.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/chell.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/endon.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/etruria.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/fenton.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/festival-park.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/hanley.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/kidsgrove.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/leek.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/longton.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/meir.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/newcastle-under-lyme.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/shelton.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/stoke-on-trent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/stoke.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/stone.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/trent-vale.html</loc></url>
+  <url><loc>https://five-towns.co.uk/areas/tunstall.html</loc></url>
+  <url><loc>https://five-towns.co.uk/complaints.html</loc></url>
   <url><loc>https://five-towns.co.uk/contact.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/</loc></url>
-  <url><loc>https://five-towns.co.uk/services/tenant-find.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/let-only.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/rent-collection.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/property-management.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/property-maintenance.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/property-refurbishment.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/property-sourcing.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/property-sales.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/property-valuations.html</loc></url>
-  <url><loc>https://five-towns.co.uk/services/investment-advice.html</loc></url>
+  <url><loc>https://five-towns.co.uk/cookie-policy.html</loc></url>
   <url><loc>https://five-towns.co.uk/landlords/</loc></url>
-  <url><loc>https://five-towns.co.uk/landlords/property-management.html</loc></url>
-  <url><loc>https://five-towns.co.uk/landlords/tenant-find.html</loc></url>
-  <url><loc>https://five-towns.co.uk/landlords/let-only.html</loc></url>
-  <url><loc>https://five-towns.co.uk/landlords/rent-collection.html</loc></url>
-  <url><loc>https://five-towns.co.uk/landlords/property-compliance.html</loc></url>
-  <url><loc>https://five-towns.co.uk/landlords/portfolio-management.html</loc></url>
   <url><loc>https://five-towns.co.uk/landlords/change-letting-agent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/landlords/let-only.html</loc></url>
+  <url><loc>https://five-towns.co.uk/landlords/portfolio-management.html</loc></url>
+  <url><loc>https://five-towns.co.uk/landlords/property-compliance.html</loc></url>
+  <url><loc>https://five-towns.co.uk/landlords/rent-collection.html</loc></url>
+  <url><loc>https://five-towns.co.uk/landlords/tenant-find.html</loc></url>
+  <url><loc>https://five-towns.co.uk/privacy-policy.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-for-sale/</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/best-areas-of-stoke-on-trent-for-buy-to-let.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/burslem-property-market-guide.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/buy-to-let-guide-for-beginners.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/fenton-property-market-guide.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/gross-vs-net-rental-yield.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/hanley-property-market-guide.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/hmo-investment-in-stoke-on-trent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-much-does-property-management-cost.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-much-is-my-house-worth.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-much-rent-can-i-achieve.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-to-calculate-rental-yield.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-to-change-letting-agent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-to-find-good-tenants.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-to-prepare-a-property-for-letting.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-to-prepare-your-house-for-sale.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-to-reduce-void-periods.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/how-to-sell-a-rental-property.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/is-stoke-on-trent-a-good-place-to-invest.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/landlord-compliance-checks.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/longton-property-market-guide.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/newcastle-under-lyme-property-market-guide.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/property-investment-strategies-stoke-on-trent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/property-refurbishment-guide-for-landlords.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/should-i-manage-my-rental-property-myself.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/should-i-sell-or-rent-my-property.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/stoke-on-trent-property-market-guide.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/tunstall-property-market-guide.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/what-does-a-property-management-company-do.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/what-makes-a-property-attractive-to-tenants.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-insights/why-use-a-property-management-company-stoke-on-trent.html</loc></url>
   <url><loc>https://five-towns.co.uk/property-investment/</loc></url>
-  <url><loc>https://five-towns.co.uk/property-investment/stoke-on-trent.html</loc></url>
-  <url><loc>https://five-towns.co.uk/property-investment/buy-to-let-stoke-on-trent.html</loc></url>
-  <url><loc>https://five-towns.co.uk/property-investment/rental-yields-stoke-on-trent.html</loc></url>
-  <url><loc>https://five-towns.co.uk/property-investment/property-sourcing.html</loc></url>
-  <url><loc>https://five-towns.co.uk/property-investment/hmo-investment-stoke-on-trent.html</loc></url>
   <url><loc>https://five-towns.co.uk/property-investment/best-areas-to-invest-stoke-on-trent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-investment/buy-to-let-stoke-on-trent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-investment/hmo-investment-stoke-on-trent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-investment/property-sourcing.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-investment/rental-yields-stoke-on-trent.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-investment/stoke-on-trent.html</loc></url>
   <url><loc>https://five-towns.co.uk/property-investment/stoke-property-market.html</loc></url>
+  <url><loc>https://five-towns.co.uk/property-to-rent/</loc></url>
   <url><loc>https://five-towns.co.uk/sales/</loc></url>
   <url><loc>https://five-towns.co.uk/sales/property-valuation-stoke-on-trent.html</loc></url>
   <url><loc>https://five-towns.co.uk/sales/selling-a-property-stoke-on-trent.html</loc></url>
-  <url><loc>https://five-towns.co.uk/areas/</loc></url>
-  <url><loc>https://five-towns.co.uk/areas/stoke-on-trent.html</loc></url>
-  <url><loc>https://five-towns.co.uk/areas/hanley.html</loc></url>
-  <url><loc>https://five-towns.co.uk/areas/newcastle-under-lyme.html</loc></url>
-  <url><loc>https://five-towns.co.uk/property-for-sale/</loc></url>
-  <url><loc>https://five-towns.co.uk/property-to-rent/</loc></url>
-  <url><loc>https://five-towns.co.uk/property-insights/</loc></url>
-  <url><loc>https://five-towns.co.uk/property-insights/why-use-a-property-management-company-stoke-on-trent.html</loc></url>
-  <url><loc>https://five-towns.co.uk/privacy-policy.html</loc></url>
-  <url><loc>https://five-towns.co.uk/cookie-policy.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/</loc></url>
+  <url><loc>https://five-towns.co.uk/services/investment-advice.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/let-only.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/property-maintenance.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/property-management.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/property-refurbishment.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/property-sales.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/property-sourcing.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/property-valuations.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/rent-collection.html</loc></url>
+  <url><loc>https://five-towns.co.uk/services/tenant-find.html</loc></url>
   <url><loc>https://five-towns.co.uk/terms.html</loc></url>
-  <url><loc>https://five-towns.co.uk/complaints.html</loc></url>
 </urlset>
