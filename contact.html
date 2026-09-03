@@ -86,7 +86,9 @@
     </div>
     <div>
       <h2 id="valuation">Book a property valuation</h2>
-      <form data-lead-form aria-label="Property valuation enquiry">
+      <form data-lead-form aria-label="Property valuation enquiry" data-web3forms-key="[INSERT WEB3FORMS ACCESS KEY]">
+        <input type="hidden" name="subject" value="New enquiry from the Five Towns website">
+        <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <div class="form-field"><label for="v-name">Full name</label><input id="v-name" name="name" required></div>
           <div class="form-field"><label for="v-email">Email</label><input type="email" id="v-email" name="email" required></div>

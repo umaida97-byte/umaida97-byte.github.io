@@ -37,9 +37,11 @@
     img.setAttribute("decoding", "async");
   });
 
-  /* Lead forms: front-end validation feedback + placeholder submit handling.
-     Replace the fetch endpoint below with your real form handler (e.g. Formspree,
-     Netlify Forms, or a serverless function) when you deploy. */
+  /* Lead forms: submit to Web3Forms (https://web3forms.com) — a free service that
+     emails form submissions straight to you with no backend required.
+     Setup: create a free account at web3forms.com, get your Access Key, then
+     replace [INSERT WEB3FORMS ACCESS KEY] in the form's data-web3forms-key
+     attribute in contact.html with that key. */
   document.querySelectorAll("form[data-lead-form]").forEach(function (form) {
     form.addEventListener("submit", function (evt) {
       evt.preventDefault();
@@ -48,11 +50,42 @@
         form.reportValidity();
         return;
       }
-      if (status) {
-        status.textContent = "Thank you — a member of the team will be in touch shortly.";
-        status.hidden = false;
+      var key = form.getAttribute("data-web3forms-key");
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var showStatus = function (message) {
+        if (status) {
+          status.textContent = message;
+          status.hidden = false;
+        }
+      };
+      if (!key || key.indexOf("INSERT") !== -1) {
+        showStatus("This form isn't connected yet — add a Web3Forms access key in contact.html to enable it.");
+        return;
       }
-      form.reset();
+      var formData = new FormData(form);
+      formData.append("access_key", key);
+      if (submitBtn) { submitBtn.disabled = true; }
+      showStatus("Sending...");
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            showStatus("Thank you — a member of the team will be in touch shortly.");
+            form.reset();
+          } else {
+            showStatus("Something went wrong sending your enquiry. Please call or email us directly.");
+          }
+        })
+        .catch(function () {
+          showStatus("Something went wrong sending your enquiry. Please call or email us directly.");
+        })
+        .finally(function () {
+          if (submitBtn) { submitBtn.disabled = false; }
+        });
     });
   });
 })();
