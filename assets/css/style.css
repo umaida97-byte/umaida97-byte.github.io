@@ -1,8 +1,8 @@
 /* =========================================================================
-   FIVE TOWNS — GLOBAL STYLESHEET
+   FIVE TOWNS - GLOBAL STYLESHEET
    Design language: The Potteries. Fired clay, stoneware, kiln warmth,
    and the cobalt/oxide glazes historically associated with Staffordshire
-   ceramics (Wedgwood jasperware blue) — used sparingly as the single
+   ceramics (Wedgwood jasperware blue) - used sparingly as the single
    accent, against a warm stone and near-black palette. Plot-line hairline
    rules stand in for the property boundaries at the heart of the business.
    ========================================================================= */
@@ -17,7 +17,7 @@
   --stone-deep: #d9cfba;
   --grey: #837c70;             /* soft grey, warmed */
   --grey-line: #ded6c6;
-  --glaze: #3c5a63;            /* Wedgwood/oxide blue — the one accent */
+  --glaze: #3c5a63;            /* Wedgwood/oxide blue - the one accent */
   --glaze-deep: #28414a;
   --glaze-tint: #e4ebec;
   --white: #ffffff;

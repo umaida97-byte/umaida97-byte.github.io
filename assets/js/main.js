@@ -1,4 +1,4 @@
-/* Five Towns — global JS. No framework, no dependencies. */
+/* Five Towns - global JS. No framework, no dependencies. */
 (function () {
   "use strict";
 
@@ -37,7 +37,7 @@
     img.setAttribute("decoding", "async");
   });
 
-  /* Lead forms: submit to Web3Forms (https://web3forms.com) — a free service that
+  /* Lead forms: submit to Web3Forms (https://web3forms.com) - a free service that
      emails form submissions straight to you with no backend required.
      Setup: create a free account at web3forms.com, get your Access Key, then
      replace [INSERT WEB3FORMS ACCESS KEY] in the form's data-web3forms-key
@@ -59,7 +59,7 @@
         }
       };
       if (!key || key.indexOf("INSERT") !== -1) {
-        showStatus("This form isn't connected yet — add a Web3Forms access key in contact.html to enable it.");
+        showStatus("This form isn't connected yet - add a Web3Forms access key in contact.html to enable it.");
         return;
       }
       var formData = new FormData(form);
@@ -74,7 +74,7 @@
         .then(function (res) { return res.json(); })
         .then(function (data) {
           if (data.success) {
-            showStatus("Thank you — a member of the team will be in touch shortly.");
+            showStatus("Thank you - a member of the team will be in touch shortly.");
             form.reset();
           } else {
             showStatus("Something went wrong sending your enquiry. Please call or email us directly.");
