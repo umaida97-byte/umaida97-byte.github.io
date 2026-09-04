@@ -88,4 +88,36 @@
         });
     });
   });
+  /* Testimonial carousels: find each [data-testimonial-carousel], wire up
+     prev/next arrows and dot navigation. Works with any number of slides. */
+  document.querySelectorAll("[data-testimonial-carousel]").forEach(function (carousel) {
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll(".tc-slide"));
+    if (slides.length < 2) return; // nothing to navigate
+    var dotsWrap = carousel.querySelector(".tc-dots");
+    var current = 0;
+
+    var dots = slides.map(function (_, i) {
+      var dot = document.createElement("button");
+      dot.className = "tc-dot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show testimonial " + (i + 1) + " of " + slides.length);
+      dot.addEventListener("click", function () { show(i); });
+      if (dotsWrap) dotsWrap.appendChild(dot);
+      return dot;
+    });
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (s, i) { s.classList.toggle("is-active", i === current); });
+      dots.forEach(function (d, i) { d.classList.toggle("is-active", i === current); });
+    }
+
+    var prevBtn = carousel.querySelector(".tc-prev");
+    var nextBtn = carousel.querySelector(".tc-next");
+    if (prevBtn) prevBtn.addEventListener("click", function () { show(current - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { show(current + 1); });
+
+    show(0);
+  });
+
 })();

@@ -144,8 +144,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-bottom: 1px solid var(--grey-line);
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
-.logo { font-family: var(--font-display); font-size: var(--step-1); font-weight: 600; text-decoration: none; color: var(--ink); letter-spacing: -0.01em; }
+.logo { font-family: var(--font-display); font-size: var(--step-1); font-weight: 600; text-decoration: none; color: var(--ink); letter-spacing: -0.01em; display: inline-flex; align-items: center; }
 .logo span { color: var(--glaze); }
+.logo-img { height: 42px; width: auto; display: block; }
+.logo-img-footer { height: 38px; width: auto; display: block; }
 
 .nav-primary { display: none; }
 .nav-primary ul { display: flex; gap: 1.9rem; list-style: none; margin: 0; padding: 0; }
@@ -307,6 +309,31 @@ legend { font-family: var(--font-display); font-size: var(--step-2); padding: 0 
 @media (max-width: 640px) {
   .aside-photo { float: none; width: 100%; max-width: none; margin: 0 0 1.5rem; }
 }
+
+/* ---- Testimonial carousel --------------------------------------------------*/
+.testimonial-carousel { max-width: 640px; }
+.tc-track { position: relative; min-height: 11rem; }
+.tc-slide { display: none; border-left: 3px solid var(--glaze); padding-left: 1.5rem; }
+.tc-slide.is-active { display: block; animation: tc-fade 260ms ease; }
+@keyframes tc-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .tc-slide.is-active { animation: none; } }
+.tc-slide p { font-family: var(--font-display); font-size: var(--step-1); font-style: normal; margin: 0 0 0.6em; }
+.tc-slide cite { font-style: normal; font-size: var(--step--1); color: var(--grey); }
+.tc-controls { display: flex; align-items: center; gap: 1.25rem; margin-top: 1.75rem; }
+.tc-arrow {
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  background: none; border: 1px solid var(--grey-line); border-radius: var(--radius);
+  cursor: pointer; font-size: 1rem; color: var(--ink); transition: border-color 160ms ease, color 160ms ease;
+}
+.tc-arrow:hover { border-color: var(--glaze); color: var(--glaze); }
+.tc-dots { display: flex; gap: 0.6rem; }
+.tc-dot {
+  width: 9px; height: 9px; background: var(--grey-line); border: none; padding: 0;
+  cursor: pointer; transform: rotate(45deg); transition: background-color 160ms ease;
+}
+.tc-dot.is-active { background: var(--glaze); }
+.section--ink .tc-arrow, .section--glaze .tc-arrow { border-color: rgba(255,255,255,0.3); color: var(--paper); }
+.section--ink .tc-slide cite, .section--glaze .tc-slide cite { color: var(--stone); }
 
 /* ---- Breadcrumbs --------------------------------------------------------------*/
 .breadcrumbs { font-size: var(--step--1); color: var(--grey); padding-top: 1.6rem; }
