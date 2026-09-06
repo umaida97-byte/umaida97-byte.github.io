@@ -162,7 +162,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .nav-mobile {
   display: none;
-  position: fixed; inset: 76px 0 0 0; background: var(--paper); z-index: 99; overflow-y: auto;
+  position: fixed; top: 76px; right: 0; bottom: 0; left: 0;
+  height: calc(100vh - 76px); height: calc(100dvh - 76px);
+  background: var(--paper); z-index: 99; overflow-y: auto; -webkit-overflow-scrolling: touch;
   padding: 2rem var(--gutter) 3rem;
 }
 .nav-mobile.is-open { display: block; }
@@ -334,6 +336,32 @@ legend { font-family: var(--font-display); font-size: var(--step-2); padding: 0 
 .tc-dot.is-active { background: var(--glaze); }
 .section--ink .tc-arrow, .section--glaze .tc-arrow { border-color: rgba(255,255,255,0.3); color: var(--paper); }
 .section--ink .tc-slide cite, .section--glaze .tc-slide cite { color: var(--stone); }
+
+/* ---- WhatsApp floating button ------------------------------------------*/
+.whatsapp-fab {
+  position: fixed;
+  right: calc(1.25rem + env(safe-area-inset-right));
+  bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  z-index: 150;
+  width: 56px; height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.28);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.whatsapp-fab:hover, .whatsapp-fab:focus-visible {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.32);
+}
+.whatsapp-fab svg { width: 30px; height: 30px; display: block; }
+@media (max-width: 480px) {
+  .whatsapp-fab { width: 52px; height: 52px; right: calc(1rem + env(safe-area-inset-right)); bottom: calc(1rem + env(safe-area-inset-bottom)); }
+  .whatsapp-fab svg { width: 27px; height: 27px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-fab { transition: none; }
+}
 
 /* ---- Breadcrumbs --------------------------------------------------------------*/
 .breadcrumbs { font-size: var(--step--1); color: var(--grey); padding-top: 1.6rem; }

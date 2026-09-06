@@ -5,17 +5,45 @@
   /* Mobile nav toggle */
   var toggle = document.querySelector(".nav-toggle");
   var mobileNav = document.querySelector(".nav-mobile");
+  var savedScrollY = 0;
+
+  function openMobileNav() {
+    savedScrollY = window.scrollY || window.pageYOffset || 0;
+    mobileNav.classList.add("is-open");
+    toggle.setAttribute("aria-expanded", "true");
+    // Robust mobile-Safari-safe scroll lock: overflow:hidden alone is
+    // unreliable once the page has been scrolled, and can clip a
+    // position:fixed overlay to whatever sliver is at the current scroll
+    // offset. Pinning the body in place with a negative top offset avoids that.
+    document.body.style.position = "fixed";
+    document.body.style.top = "-" + savedScrollY + "px";
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+  }
+
+  function closeMobileNav() {
+    mobileNav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    window.scrollTo(0, savedScrollY);
+  }
+
   if (toggle && mobileNav) {
     toggle.addEventListener("click", function () {
-      var open = mobileNav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(open));
-      document.body.style.overflow = open ? "hidden" : "";
+      if (mobileNav.classList.contains("is-open")) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
     mobileNav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
-        mobileNav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        closeMobileNav();
       });
     });
   }
