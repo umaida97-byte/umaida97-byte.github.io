@@ -329,16 +329,24 @@ legend { font-family: var(--font-display); font-size: var(--step-2); padding: 0 
 .yc-disclaimer { font-size: var(--step--1); color: var(--grey); margin: 0; max-width: 60ch; }
 .yc-slider-row { display: flex; align-items: center; gap: 1rem; }
 .yc-slider-row input[type="range"] {
-  flex: 1; -webkit-appearance: none; appearance: none; height: 2px;
-  background: var(--grey-line); border-radius: 2px; outline: none; cursor: pointer;
+  flex: 1 1 auto; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important;
+  height: 4px !important; padding: 0 !important; margin: 0 !important; border: none !important; box-sizing: border-box !important;
+  background: var(--grey-line) !important; border-radius: 2px !important; outline: none; cursor: pointer;
+  min-height: 0; max-height: 4px;
+}
+.yc-slider-row input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px !important; background: var(--grey-line) !important; border-radius: 2px !important; border: none !important;
+}
+.yc-slider-row input[type="range"]::-moz-range-track {
+  height: 4px !important; background: var(--grey-line) !important; border-radius: 2px !important; border: none !important;
 }
 .yc-slider-row input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; appearance: none; width: 20px; height: 20px; border-radius: 50%;
-  background: var(--glaze); border: 3px solid var(--paper); box-shadow: 0 0 0 1px var(--glaze); cursor: pointer;
-  margin-top: -9px;
+  -webkit-appearance: none !important; appearance: none !important; width: 26px !important; height: 26px !important; border-radius: 50% !important;
+  background: var(--glaze) !important; border: 3px solid var(--paper) !important; box-shadow: 0 0 0 1px var(--glaze); cursor: pointer;
+  margin-top: -11px !important;
 }
 .yc-slider-row input[type="range"]::-moz-range-thumb {
-  width: 20px; height: 20px; border-radius: 50%; background: var(--glaze);
+  width: 26px; height: 26px; border-radius: 50%; background: var(--glaze);
   border: 3px solid var(--paper); box-shadow: 0 0 0 1px var(--glaze); cursor: pointer;
 }
 .yc-slider-value {
