@@ -83,6 +83,35 @@
 <h2>Ongoing responsibilities</h2><p>Once you own the property, you take on landlord responsibilities: referencing tenants properly, meeting compliance requirements (see our <a href="/landlords/property-compliance.html">compliance guide</a>), and either managing the tenancy yourself or instructing an agent to do it for you.</p>
   </div>
 </section>
+<section class="section" data-yield-calculator>
+  <div class="wrap">
+    <div class="yield-calculator">
+      <div class="yc-intro">
+        <h3>Rental Yield Calculator</h3>
+        <p>Enter a property's price and rent to see gross yield instantly - add annual running costs for net yield too.</p>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="yc-price">Property price (&pound;)</label>
+          <input type="number" id="yc-price" data-yc-price inputmode="decimal" min="0" placeholder="e.g. 120000">
+        </div>
+        <div class="form-field">
+          <label for="yc-rent">Monthly rent (&pound;)</label>
+          <input type="number" id="yc-rent" data-yc-rent inputmode="decimal" min="0" placeholder="e.g. 750">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="yc-costs">Annual running costs (&pound;) <span class="hint">optional - management, maintenance, insurance etc., for net yield</span></label>
+        <input type="number" id="yc-costs" data-yc-costs inputmode="decimal" min="0" placeholder="e.g. 1200">
+      </div>
+      <div class="yc-results">
+        <div class="stat"><b data-yc-gross>0.0%</b><span>Gross yield</span></div>
+        <div class="stat"><b data-yc-net>0.0%</b><span>Net yield</span></div>
+      </div>
+      <p class="yc-disclaimer">A simple guide based on the figures you enter - it doesn't account for financing costs, void periods or tax. <a href="/contact.html">Talk to us</a> for the fuller picture on a specific property.</p>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="wrap" style="max-width:74ch">
     <details class="faq-item"><summary>Is buy-to-let still worth it?</summary><p>Buy-to-let can still work as an investment, but returns depend heavily on financing costs, tax treatment and the specific property - it's worth modelling your own numbers rather than relying on generic guides.</p></details>

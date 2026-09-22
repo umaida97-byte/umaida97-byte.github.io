@@ -148,4 +148,37 @@
     show(0);
   });
 
+  /* Rental yield calculator: gross yield always shown, net yield once
+     annual running costs are entered. Pure client-side arithmetic, so
+     there's nothing here that goes stale over time. */
+  document.querySelectorAll("[data-yield-calculator]").forEach(function (calc) {
+    var priceInput = calc.querySelector("[data-yc-price]");
+    var rentInput = calc.querySelector("[data-yc-rent]");
+    var costsInput = calc.querySelector("[data-yc-costs]");
+    var grossOut = calc.querySelector("[data-yc-gross]");
+    var netOut = calc.querySelector("[data-yc-net]");
+    if (!priceInput || !rentInput || !costsInput || !grossOut || !netOut) return;
+
+    function formatPercent(n) {
+      if (!isFinite(n) || isNaN(n) || n < 0) return "0.0%";
+      return n.toFixed(1) + "%";
+    }
+
+    function recalc() {
+      var price = parseFloat(priceInput.value) || 0;
+      var monthlyRent = parseFloat(rentInput.value) || 0;
+      var annualCosts = parseFloat(costsInput.value) || 0;
+      var annualRent = monthlyRent * 12;
+      var gross = price > 0 ? (annualRent / price) * 100 : 0;
+      var net = price > 0 ? ((annualRent - annualCosts) / price) * 100 : 0;
+      grossOut.textContent = formatPercent(gross);
+      netOut.textContent = formatPercent(net);
+    }
+
+    [priceInput, rentInput, costsInput].forEach(function (input) {
+      input.addEventListener("input", recalc);
+    });
+    recalc();
+  });
+
 })();
