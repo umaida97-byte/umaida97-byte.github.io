@@ -327,6 +327,23 @@ legend { font-family: var(--font-display); font-size: var(--step-2); padding: 0 
 }
 .yc-results .stat { background: var(--paper); }
 .yc-disclaimer { font-size: var(--step--1); color: var(--grey); margin: 0; max-width: 60ch; }
+.yc-slider-row { display: flex; align-items: center; gap: 1rem; }
+.yc-slider-row input[type="range"] {
+  flex: 1; -webkit-appearance: none; appearance: none; height: 4px;
+  background: var(--grey-line); border-radius: 2px; outline: none; cursor: pointer;
+}
+.yc-slider-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--glaze); border: 3px solid var(--paper); box-shadow: 0 0 0 1px var(--glaze); cursor: pointer;
+}
+.yc-slider-row input[type="range"]::-moz-range-thumb {
+  width: 20px; height: 20px; border-radius: 50%; background: var(--glaze);
+  border: 3px solid var(--paper); box-shadow: 0 0 0 1px var(--glaze); cursor: pointer;
+}
+.yc-slider-value {
+  font-family: var(--font-display); font-weight: 600; color: var(--glaze-deep);
+  min-width: 3.6em; text-align: right; font-size: var(--step-0);
+}
 
 /* ---- Testimonial carousel --------------------------------------------------*/
 .testimonial-carousel { max-width: 640px; }

@@ -155,6 +155,8 @@
     var priceInput = calc.querySelector("[data-yc-price]");
     var rentInput = calc.querySelector("[data-yc-rent]");
     var costsInput = calc.querySelector("[data-yc-costs]");
+    var mgmtFeeInput = calc.querySelector("[data-yc-mgmt-fee]");
+    var mgmtFeeValue = calc.querySelector("[data-yc-mgmt-fee-value]");
     var grossOut = calc.querySelector("[data-yc-gross]");
     var netOut = calc.querySelector("[data-yc-net]");
     if (!priceInput || !rentInput || !costsInput || !grossOut || !netOut) return;
@@ -168,16 +170,20 @@
       var price = parseFloat(priceInput.value) || 0;
       var monthlyRent = parseFloat(rentInput.value) || 0;
       var annualCosts = parseFloat(costsInput.value) || 0;
+      var mgmtFeePercent = mgmtFeeInput ? (parseFloat(mgmtFeeInput.value) || 0) : 0;
       var annualRent = monthlyRent * 12;
+      var mgmtFeeAmount = annualRent * (mgmtFeePercent / 100);
       var gross = price > 0 ? (annualRent / price) * 100 : 0;
-      var net = price > 0 ? ((annualRent - annualCosts) / price) * 100 : 0;
+      var net = price > 0 ? ((annualRent - annualCosts - mgmtFeeAmount) / price) * 100 : 0;
       grossOut.textContent = formatPercent(gross);
       netOut.textContent = formatPercent(net);
+      if (mgmtFeeValue) mgmtFeeValue.textContent = mgmtFeePercent.toFixed(1) + "%";
     }
 
     [priceInput, rentInput, costsInput].forEach(function (input) {
       input.addEventListener("input", recalc);
     });
+    if (mgmtFeeInput) mgmtFeeInput.addEventListener("input", recalc);
     recalc();
   });
 
