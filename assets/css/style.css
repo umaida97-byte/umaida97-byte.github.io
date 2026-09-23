@@ -379,6 +379,33 @@ legend { font-family: var(--font-display); font-size: var(--step-2); padding: 0 
 .section--ink .tc-arrow, .section--glaze .tc-arrow { border-color: rgba(255,255,255,0.3); color: var(--paper); }
 .section--ink .tc-slide cite, .section--glaze .tc-slide cite { color: var(--stone); }
 
+/* ---- Cookie consent banner -----------------------------------------------*/
+.cookie-banner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+  background: var(--ink); color: var(--paper);
+  padding: 1.25rem var(--gutter);
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.25);
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner-inner {
+  max-width: var(--content-max); margin-inline: auto;
+  display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: space-between;
+}
+.cookie-banner-inner p { margin: 0; font-size: var(--step--1); color: var(--stone); max-width: 62ch; }
+.cookie-banner-inner a { color: var(--paper); }
+.cookie-banner-actions { display: flex; gap: 0.75rem; flex: none; }
+.cookie-banner .btn-outline { color: var(--paper); border-color: rgba(255,255,255,0.4); }
+.cookie-banner .btn-outline:hover { background: var(--paper); color: var(--ink); }
+
+/* Shift the WhatsApp button above the banner while it's showing, so they
+   don't sit on top of each other. The offset is an estimate for typical
+   two-line banner height on desktop and three-line on narrow phones —
+   worth a visual check after deploying. */
+body.cookie-banner-visible .whatsapp-fab { bottom: calc(1.25rem + env(safe-area-inset-bottom) + 84px); }
+@media (max-width: 480px) {
+  body.cookie-banner-visible .whatsapp-fab { bottom: calc(1rem + env(safe-area-inset-bottom) + 120px); }
+}
+
 /* ---- WhatsApp floating button ------------------------------------------*/
 .whatsapp-fab {
   position: fixed;
