@@ -1,0 +1,48 @@
+---
+layout: default
+title: "Estate Agents Stoke-on-Trent | Sell Your Property | Five Towns Lettings"
+description: "Sell your property in Stoke-on-Trent with a local family-run agent. 1.2% including VAT (minimum £1,200 inc VAT), charged on completion. Free sales valuation."
+redirect_from:
+- /services/property-sales.html
+---
+{% assign c = site.data.company %}{% assign f = site.data.fees %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Sell</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap" style="max-width:74ch">
+    <h1>Selling your property in Stoke-on-Trent</h1>
+    <p class="lede">A realistic valuation, marketing that reaches the right buyers, and someone keeping the sale moving through to completion. {{ f.sales.inc_vat }} including VAT, minimum {{ f.sales.minimum_inc_vat }}, and only payable on completion.</p>
+    <div class="cta-row"><a class="btn btn-primary" href="#valuation">Book a Free Sales Valuation</a><a class="btn btn-outline" href="/fees.html#sales-fees">Sales Fee in Detail</a></div>
+  </div>
+</section>
+<section class="section section--stone">
+  <div class="wrap grid-2">
+    <div>
+      <h2>How we sell your property</h2>
+      <ul class="feature-list">
+        <li>A valuation based on what's actually selling nearby, not the highest figure to win the instruction</li>
+        <li>Marketing to our own network of buyers and investors, and on property portals</li>
+        <li>Accompanied viewings</li>
+        <li>Negotiation on your behalf</li>
+        <li>Sales progression through to completion</li>
+      </ul>
+      <h3>Selling a tenanted property?</h3>
+      <p>We manage over {{ c.portfolio.properties }} rental properties and work with investors, so we can advise on selling with a tenant in place or with vacant possession, and on the Renters' Rights Act rules that apply.</p>
+    </div>
+    <div>
+      <img class="inline-photo" src="/assets/images/tunstall-real.jpg" srcset="/assets/images/tunstall-real-800.jpg 800w, /assets/images/tunstall-real.jpg 1200w" sizes="(min-width: 980px) 50vw, 100vw" alt="Tunstall Town Hall, Stoke-on-Trent" loading="lazy" decoding="async">
+      <h2>Guides for sellers</h2>
+      <ul>
+        <li><a href="/sales/property-valuation-stoke-on-trent.html">How much is my house worth in Stoke-on-Trent?</a></li>
+        <li><a href="/sales/selling-a-property-stoke-on-trent.html">Selling a property in Stoke-on-Trent</a></li>
+        <li><a href="/property-insights/should-i-sell-or-rent-my-property.html">Should I sell or rent my property?</a></li>
+        <li><a href="/property-insights/how-to-sell-a-rental-property.html">How to sell a rental property</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section" id="valuation" aria-labelledby="sv-heading">
+  <div class="wrap grid-2">
+    <div><h2 id="sv-heading">Book a free sales valuation</h2><p>Tell us about the property and we'll arrange a visit. Or call <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a>.</p></div>
+    <div class="form-panel">{% include form-sales.html %}</div>
+  </div>
+</section>

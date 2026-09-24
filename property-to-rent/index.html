@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Houses & Flats to Rent in Stoke-on-Trent | Five Towns Lettings"
+description: "Houses and flats to rent in Stoke-on-Trent and nearby from Five Towns Lettings. Register your requirements to hear about new properties first."
+---
+{% assign c = site.data.company %}{% assign listed = site.properties | where: "listing", "rent" %}{% assign count = listed | size %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Properties to Rent</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap">
+    <h1>Houses and flats to rent in Stoke-on-Trent</h1>
+    <p class="lede" style="max-width:60ch">Many of our homes are let to people already registered with us, so if you don't see the right one here, <a href="/tenants/#register">tell us what you need</a>.</p>
+    <div class="property-grid">
+      {% for p in listed %}{% include property-card.html %}{% endfor %}
+    </div>
+    {% if count == 0 %}<div class="property-empty">
+      <h2>No properties are advertised right now</h2>
+      <p>New homes usually go to registered applicants first. Register your requirements and we'll contact you when something suitable comes up.</p>
+      <div class="cta-row"><a class="btn btn-primary" href="/tenants/#register">Register Your Requirements</a><a class="btn btn-outline" href="tel:{{ c.phone_link }}">Call {{ c.phone }}</a></div>
+    </div>{% endif %}
+  </div>
+</section>
+<section class="section section--stone">
+  <div class="wrap" style="max-width:74ch">
+    <h2>Renting with us</h2>
+    <p>Your deposit is {{ site.data.fees.tenants.deposit | downcase }}, protected with the {{ site.data.fees.tenants.deposit_scheme }}. We don't take holding deposits. There are no charges for viewings, referencing or tenancy agreements. <a href="/tenants/">How renting with us works</a>.</p>
+    <p>Are you a landlord? <a href="/landlords/rental-valuation.html">Find out what your property could let for</a>.</p>
+  </div>
+</section>
