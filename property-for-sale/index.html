@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Houses for Sale in Stoke-on-Trent | Five Towns Lettings"
+description: "Properties for sale in Stoke-on-Trent from Five Towns Lettings, including investment property. Get in touch to hear about new properties first."
+---
+{% assign c = site.data.company %}{% assign listed = site.properties | where: "listing", "sale" %}{% assign count = listed | size %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Properties for Sale</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap">
+    <h1>Properties for sale in Stoke-on-Trent</h1>
+    <div class="property-grid">
+      {% for p in listed %}{% include property-card.html %}{% endfor %}
+    </div>
+    {% if count == 0 %}<div class="property-empty">
+      <h2>No properties are advertised for sale right now</h2>
+      <p>If you're looking to buy, including investment property, tell us what you're after and we'll let you know when something suitable comes up.</p>
+      <div class="cta-row"><a class="btn btn-primary" href="/contact.html">Tell Us What You're Looking For</a><a class="btn btn-outline" href="/sales/">Selling? Book a Valuation</a></div>
+    </div>{% endif %}
+  </div>
+</section>

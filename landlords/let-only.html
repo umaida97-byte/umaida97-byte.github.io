@@ -1,0 +1,54 @@
+---
+layout: default
+title: "Let Only & Tenant Find Stoke-on-Trent | Five Towns Lettings"
+description: "Let Only (tenant find) service for Stoke-on-Trent landlords: marketing, viewings, referencing and tenancy agreement for a one-off fee of £420 including VAT (£350 + VAT)."
+redirect_from:
+- /landlords/tenant-find.html
+- /services/tenant-find.html
+- /services/let-only.html
+---
+{% assign c = site.data.company %}{% assign f = site.data.fees %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/landlords/">Landlords</a></li><li>Let Only</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap">
+    <h1>Let Only (tenant find) in Stoke-on-Trent</h1>
+    <p class="lede" style="max-width:60ch">We find, reference and move in the right tenant. Once the tenancy starts, you run it yourself. One-off fee: {{ f.let_only.inc_vat }} including VAT ({{ f.let_only.ex_vat }}).</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#quote">Get a Free Rental Valuation</a>
+      <a class="btn btn-outline" href="/landlords/property-management.html">Compare With Full Management</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone">
+  <div class="wrap grid-2">
+    <div>
+      <h2>What's included</h2>
+      <ul class="feature-list">
+        <li>Rental valuation and advice on preparing the property</li>
+        <li>Matching the property to tenants from our own network</li>
+        <li>Advertising on portals such as Zoopla where needed</li>
+        <li>Viewings</li>
+        <li>Full referencing and right-to-rent checks</li>
+        <li>Tenancy agreement</li>
+      </ul>
+    </div>
+    <div>
+      <h2>What you handle after move-in</h2>
+      <p>With Let Only, you become the tenant's point of contact. That means collecting rent, arranging repairs, inspections, protecting the deposit within 30 days, serving the right information and notices, and keeping gas, electrical and EPC certificates current.</p>
+      <p>If you'd rather not, <a href="/landlords/property-management.html">Full Management</a> covers all of it for 12% of the rent including VAT.</p>
+      <p>Tenant Find and Let Only are the same service; you'll see both names used by agents.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quote" aria-labelledby="quote-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="quote-heading">Find out what your property could let for</h2>
+      <p>Send us the details and we'll call to arrange a visit. Or call <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a>.</p>
+    </div>
+    <div class="form-panel">{% include form-landlord.html %}</div>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Let only (tenant find)","name":"Let Only in Stoke-on-Trent","provider":{"@id":"{{ site.url }}/#organisation"},"areaServed":"Stoke-on-Trent","offers":{"@type":"Offer","price":"420","priceCurrency":"GBP","description":"£420 including VAT (£350 + VAT), one-off fee"}}</script>

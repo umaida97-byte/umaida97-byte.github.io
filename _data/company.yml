@@ -1,0 +1,65 @@
+# ------------------------------------------------------------------
+# Company details used across the whole site (header, footer, contact
+# page, fees page and search-engine data). Change a value here once
+# and it updates everywhere.
+# ------------------------------------------------------------------
+
+name: Five Towns Lettings
+legal_name: Five Towns Stoke Ltd
+company_number: "07621470"
+letting_since: 2000          # year the family began letting property
+incorporated: 2011           # year the company was incorporated
+
+address:
+  street: 27 Birch Terrace
+  town: Stoke-on-Trent
+  county: Staffordshire
+  postcode: ST1 3JN
+visits_note: Our office is not open to the public. Meetings are by appointment.
+
+phone: 07463 006088
+phone_link: "+447463006088"
+phone2: 07877 717402
+phone2_link: "+447877717402"
+whatsapp: "447463006088"
+email: info@five-towns.co.uk
+
+hours:
+  - days: Monday to Friday
+    time: 8:30am to 5:30pm
+  - days: Saturday
+    time: 10:00am to 4:00pm
+  - days: Sunday
+    time: Closed
+
+google_profile: https://share.google/2byH90SB7MJsPt7So
+
+portfolio:
+  properties: "150"
+  landlords: "50"
+
+memberships:
+  redress: Property Redress Scheme
+  redress_number: PRS011880
+  cmp: Money Shield Client Money Protection
+  cmp_number: "72587914"
+  cmp_limit: "£50,000"
+  nrla: National Residential Landlords Association (NRLA)
+
+# Web3Forms access key (sends website enquiries to your inbox).
+# This key is designed to be public; restrict it to your domain in the Web3Forms dashboard.
+web3forms_key: 6d05e325-fdc9-4a3a-a0bd-9f2c3c13c685
+
+team:
+  - name: Aftab Jabbar
+    role: Co-founder
+    generation: first
+  - name: Sophie Jabbar
+    role: Co-founder
+    generation: first
+  - name: Umaid Ahmad
+    role: Second generation, growing the business
+    generation: second
+  - name: Iman Jabbar
+    role: Second generation, growing the business
+    generation: second

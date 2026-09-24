@@ -1,0 +1,107 @@
+---
+layout: default
+title: "Letting Agents & Property Management in Stoke-on-Trent | Five Towns Lettings"
+description: "Family-run letting agent in Stoke-on-Trent managing 150+ properties for 50+ landlords. Full management from 12% inc VAT. Free rental valuations. Letting locally since 2000."
+---
+{% assign c = site.data.company %}{% assign f = site.data.fees %}
+<section class="hero" style="--hero-img:url('/assets/images/stoke-pots.jpg')">
+  <div class="wrap hero-inner">
+    <p class="hero-kicker">Stoke-on-Trent and surrounding areas</p>
+    <h1>Letting agents and property managers in Stoke-on-Trent</h1>
+    <p class="lede">A family-run agency looking after more than {{ c.portfolio.properties }} properties for over {{ c.portfolio.landlords }} landlords. We've let property in the Potteries since {{ c.letting_since }}, and we're landlords ourselves.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/landlords/rental-valuation.html">Get a Free Rental Valuation</a>
+      <a class="btn btn-outline" href="/fees.html">See Our Fees</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="At a glance">
+  <div class="wrap">
+    {% include trust-strip.html %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="services-heading">
+  <div class="wrap">
+    <div class="section-head wide">
+      <h2 id="services-heading">Two ways to let your property</h2>
+      <p>Choose Let Only if you want a good tenant found and will run the tenancy yourself. Choose Full Management if you want us to handle everything from move-in to move-out. Every fee is shown including VAT.</p>
+    </div>
+    {% include service-comparison.html %}
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/landlords/property-management.html">Full Management in Detail</a>
+      <a class="btn btn-outline" href="/landlords/let-only.html">Let Only in Detail</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="why-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="why-heading">Why landlords stay with us</h2>
+      <p>The Jabbar family has let property in Stoke-on-Trent since {{ c.letting_since }}, and Aftab and Sophie Jabbar founded Five Towns Lettings in {{ c.incorporated }}. The second generation, Umaid Ahmad and Iman Jabbar, now work alongside them to grow the business. When you call, you speak to the family that runs it.</p>
+      <ul class="feature-list">
+        <li>Many of our properties are let through our own network of tenants and landlords, often before they reach the portals. When we do advertise, we use sites such as Zoopla.</li>
+        <li>Rent reaches you around five working days after the tenant pays, unless we've agreed a different date with you.</li>
+        <li>You get a statement with every payment and an invoice for every job.</li>
+        <li>We agree a repair limit with you. Below it, we get the job done; above it, we ask first.</li>
+        <li>Two inspections a year and an out-of-hours emergency line are included in Full Management.</li>
+      </ul>
+    </div>
+    <div>
+      <img class="inline-photo" src="/assets/images/hanley-real.jpg" srcset="/assets/images/hanley-real-800.jpg 800w, /assets/images/hanley-real.jpg 1024w" sizes="(min-width: 980px) 50vw, 100vw" alt="Hanley city centre in Stoke-on-Trent" width="1024" height="702" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="process-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="process-heading">How letting with us works</h2>
+    </div>
+    <ol class="steps">
+      <li><strong>Free rental valuation</strong>We look at the property and tell you what it should let for, what it needs before letting, and which service suits you.</li>
+      <li><strong>Finding the right tenant</strong>We match the property to applicants from our network first, then advertise if needed. Every applicant is referenced and right-to-rent checked.</li>
+      <li><strong>Move-in</strong>Tenancy agreement signed, inventory and check-in completed, deposit registered with the Deposit Protection Service (DPS).</li>
+      <li><strong>Ongoing management</strong>Rent collected and paid to you with a statement, repairs arranged within your limit, inspections twice a year, compliance dates tracked.</li>
+    </ol>
+  </div>
+</section>
+
+{% include testimonials.html %}
+
+<section class="section" aria-labelledby="rra-heading">
+  <div class="wrap">
+    <div class="notice">
+      <h2 id="rra-heading">Renting rules in England changed on 1 May 2026</h2>
+      <p>The Renters' Rights Act ended section 21 notices and fixed-term assured shorthold tenancies. Our guide explains what it means for landlords, and what we handle for managed landlords.</p>
+      <p><a class="btn-text" href="/property-insights/renters-rights-act-landlord-guide.html">Read the Renters' Rights Act guide</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="more-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="more-heading">Also at Five Towns Lettings</h2>
+    </div>
+    <div class="card-grid card-grid--3">
+      <div class="card"><a class="card-link" href="/tenants/"><h3>Looking to rent?</h3></a><p>See what's available, or register what you're looking for and we'll contact you when something suitable comes up.</p></div>
+      <div class="card"><a class="card-link" href="/sales/"><h3>Selling Your Property</h3></a><p>Valuation, marketing and sales progression. {{ f.sales.inc_vat }} including VAT, minimum {{ f.sales.minimum_inc_vat }}.</p></div>
+      <div class="card"><a class="card-link" href="/property-investment/"><h3>Property Investment</h3></a><p>Sourcing, refurbishment and management for investors building a portfolio in the city.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="areas-heading">
+  <div class="wrap">
+    <div class="section-head wide">
+      <h2 id="areas-heading">Areas we cover</h2>
+      <p>We let and manage property across Stoke-on-Trent's six towns and nearby areas. Read our <a href="/areas/">area guides</a>:
+      <a href="/areas/hanley.html">Hanley</a>, <a href="/areas/burslem.html">Burslem</a>, <a href="/areas/tunstall.html">Tunstall</a>, <a href="/areas/stoke.html">Stoke</a>, <a href="/areas/fenton.html">Fenton</a>, <a href="/areas/longton.html">Longton</a> and <a href="/areas/newcastle-under-lyme.html">Newcastle-under-Lyme</a>.</p>
+    </div>
+  </div>
+</section>
+
+{% include cta-band.html %}

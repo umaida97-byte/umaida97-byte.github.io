@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Landlord Compliance Checklist 2026 | Stoke-on-Trent | Five Towns Lettings"
+description: "What landlords letting in England must have in place in 2026, including gas safety, EICR, EPC, alarms, deposits, right-to-rent and the Renters' Rights Act."
+redirect_from:
+- /property-insights/landlord-compliance-checks.html
+---
+{% assign f = site.data.fees %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/landlords/">Landlords</a></li><li>Landlord Compliance</li></ol></nav>
+<article class="section section--tight">
+  <div class="wrap" style="max-width:74ch">
+    <h1>Landlord compliance checklist for 2026</h1>
+    <p class="article-meta">Last reviewed September 2026. General information for landlords in England, not legal advice.</p>
+    <p class="lede">The main legal requirements for letting a home in England. Missing one can bring fines or make it harder to regain possession.</p>
+    <h2>Safety certificates</h2>
+    <ul class="feature-list">
+      <li><strong>Gas safety certificate</strong>: every year, where there are gas appliances, with a copy given to the tenant.</li>
+      <li><strong>Electrical Installation Condition Report (EICR)</strong>: at least every five years.</li>
+      <li><strong>Energy Performance Certificate (EPC)</strong>: before you market the property.</li>
+      <li><strong>Smoke alarms</strong> on every storey, and <strong>carbon monoxide alarms</strong> where required.</li>
+    </ul>
+    <p>We can arrange certificates for any landlord:{% for item in f.compliance %} {{ item.name }} {{ item.price }}{% if forloop.last %}.{% else %};{% endif %}{% endfor %} No VAT is added to these prices.</p>
+    <h2>Deposits and checks</h2>
+    <ul class="feature-list">
+      <li>Protect any deposit in a government-approved scheme within 30 days and give the tenant the prescribed information.</li>
+      <li>Carry out right-to-rent checks on every adult occupier before the tenancy starts.</li>
+    </ul>
+    <h2>The Renters' Rights Act</h2>
+    <p>Since 1 May 2026, new tenancies are periodic assured tenancies rather than fixed-term assured shorthold tenancies, section 21 can no longer be used, and rent can only be increased once a year using the proper notice. It is also unlawful to refuse tenants because they receive benefits or have children, or to invite bids above the advertised rent. Read our <a href="/property-insights/renters-rights-act-landlord-guide.html">Renters' Rights Act guide for landlords</a>.</p>
+    <div class="notice"><p>On <a href="/landlords/property-management.html">Full Management</a>, we track every renewal date and handle deposit registration, the tenancy agreement and rent review notices as part of the fee.</p></div>
+    <div class="cta-row"><a class="btn btn-primary" href="/landlords/rental-valuation.html">Talk to Us About Your Property</a></div>
+  </div>
+</article>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What landlord compliance checks are required in England?","acceptedAnswer":{"@type":"Answer","text":"Landlords need an annual gas safety certificate where there are gas appliances, an EICR at least every five years, a valid EPC before marketing, smoke alarms on every storey and carbon monoxide alarms where required. Deposits must be protected in a government-approved scheme within 30 days, and right-to-rent checks carried out before the tenancy starts."}}]}</script>

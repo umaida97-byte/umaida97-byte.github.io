@@ -1,0 +1,83 @@
+---
+layout: default
+title: "Letting Agent Fees Stoke-on-Trent | Landlord, Tenant & Sales Fees | Five Towns Lettings"
+description: "Five Towns Lettings fees including VAT. Full Management 12% of rent, Let Only £420, sales 1.2%. Tenant deposit one month's rent, no holding deposit."
+---
+{% assign c = site.data.company %}{% assign f = site.data.fees %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Fees</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap" style="max-width:80ch">
+    <h1>Our fees</h1>
+    <p class="lede">Every fee we charge, shown including VAT at 20%.</p>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="landlord-fees">
+  <div class="wrap">
+    <h2 id="landlord-fees">Landlord fees</h2>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <h3>{{ f.full_management.name }}</h3>
+        <p class="fee-price">{{ f.full_management.inc_vat }}</p>
+        <p class="fee-sub">Including VAT ({{ f.full_management.ex_vat }}). {{ f.full_management.basis }}.</p>
+        <p class="fee-price" style="font-size:var(--step-2)">+ {{ f.full_management.setup_inc_vat }} set-up</p>
+        <p class="fee-sub">Including VAT ({{ f.full_management.setup_ex_vat }}). {{ f.full_management.setup_basis }}.</p>
+        <p><strong>Included at no extra cost:</strong></p>
+        <ul class="feature-list">{% for item in f.full_management.included %}<li>{{ item }}</li>{% endfor %}</ul>
+        <p><a class="btn-text" href="/landlords/property-management.html">What Full Management covers</a></p>
+      </div>
+      <div class="fee-card">
+        <h3>{{ f.let_only.name }}</h3>
+        <p class="fee-price">{{ f.let_only.inc_vat }}</p>
+        <p class="fee-sub">Including VAT ({{ f.let_only.ex_vat }}). {{ f.let_only.basis }}.</p>
+        <p>Covers finding, referencing and moving in a tenant, and the tenancy agreement. You manage the tenancy after that, including protecting the deposit.</p>
+        <p><a class="btn-text" href="/landlords/let-only.html">What Let Only covers</a></p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:2.5rem">Safety certificates</h3>
+    <p>Charged when a property needs one, on either service. Certificates are carried out by our maintenance company, which is not VAT registered, so there is no VAT on these prices.</p>
+    <table class="fee-table">
+      <tbody>
+        {% for item in f.compliance %}<tr><th scope="row">{{ item.name }}</th><td>{{ item.price }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:2.5rem">Repairs and maintenance</h3>
+    <p>On Full Management we agree a spending limit per repair with you. Work below it goes ahead so problems are fixed quickly; anything above it is quoted and only goes ahead with your approval. You receive an invoice for every job.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="tenant-fees">
+  <div class="wrap" style="max-width:80ch">
+    <h2 id="tenant-fees">Tenant fees</h2>
+    <table class="fee-table">
+      <tbody>
+        <tr><th scope="row">Tenancy deposit</th><td>{{ f.tenants.deposit }}</td></tr>
+        <tr><th scope="row">Holding deposit</th><td>None. We don't take holding deposits.</td></tr>
+        <tr><th scope="row">Rent</th><td>As advertised</td></tr>
+      </tbody>
+    </table>
+    <p>Deposits are protected with the {{ f.tenants.deposit_scheme }}, a government-approved scheme. Under the Tenant Fees Act 2019, letting agents and landlords in England can only charge tenants the payments the Act allows. We don't charge tenants for referencing, viewings or tenancy agreements. <a href="/tenants/">Renting with us</a>.</p>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="sales-fees">
+  <div class="wrap" style="max-width:80ch">
+    <h2 id="sales-fees">Sales fee</h2>
+    <div class="fee-card">
+      <p class="fee-price">{{ f.sales.inc_vat }}</p>
+      <p class="fee-sub">Including VAT ({{ f.sales.ex_vat }}), charged on completion. Minimum fee {{ f.sales.minimum_inc_vat }} including VAT ({{ f.sales.minimum_ex_vat }}).</p>
+      <p>Covers valuation, marketing, viewings, negotiation and sales progression through to completion. <a class="btn-text" href="/sales/">Selling with us</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="protection">
+  <div class="wrap" style="max-width:80ch">
+    <h2 id="protection">Your money is protected</h2>
+    <p>We're members of {{ c.memberships.cmp }} (membership {{ c.memberships.cmp_number }}), the {{ c.memberships.redress }} ({{ c.memberships.redress_number }}) and the NRLA. <a href="/client-money-protection.html">View our Client Money Protection certificate</a>.</p>
+    <p>Questions about a fee? Call <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a> or <a href="/contact.html">send us a message</a>.</p>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+---
+layout: default
+title: "Landlord Services | Letting Agents in Stoke-on-Trent | Five Towns Lettings"
+description: "Let Only or Full Management for Stoke-on-Trent landlords, with fees shown including VAT. Family-run agency managing 150+ properties. Free rental valuations."
+---
+{% assign c = site.data.company %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Landlords</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap">
+    <h1>Letting and property management for Stoke-on-Trent landlords</h1>
+    <p class="lede" style="max-width:60ch">Whether you want a tenant found or the whole tenancy looked after, you'll deal with a small family team that has let property in the city since {{ c.letting_since }} and now manages more than {{ c.portfolio.properties }} properties.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/landlords/rental-valuation.html">Get a Free Rental Valuation</a>
+      <a class="btn btn-outline" href="tel:{{ c.phone_link }}">Call {{ c.phone }}</a>
+    </div>
+    {% include trust-strip.html %}
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="compare-heading">
+  <div class="wrap">
+    <div class="section-head wide">
+      <h2 id="compare-heading">Compare our services</h2>
+      <p>All fees include VAT. There's nothing extra for inventories, check-ins, check-outs, deposit registration, tenancy agreements or rent review notices on Full Management.</p>
+    </div>
+    {% include service-comparison.html %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="guides-heading">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="guides-heading">Services and guidance for landlords</h2>
+    </div>
+    <div class="card-grid card-grid--3">
+      <div class="card"><a class="card-link" href="/landlords/property-management.html"><h3>Full Management</h3></a><p>We run the tenancy from start to finish: rent, repairs, inspections and compliance.</p></div>
+      <div class="card"><a class="card-link" href="/landlords/let-only.html"><h3>Let Only (Tenant Find)</h3></a><p>We find and reference the tenant and set up the tenancy. You manage it from there.</p></div>
+      <div class="card"><a class="card-link" href="/landlords/rental-valuation.html"><h3>Free Rental Valuation</h3></a><p>Find out what your property should let for and what it needs first.</p></div>
+      <div class="card"><a class="card-link" href="/landlords/portfolio-management.html"><h3>Portfolio Management</h3></a><p>Managing several properties, including HMOs, to one consistent standard.</p></div>
+      <div class="card"><a class="card-link" href="/landlords/change-letting-agent.html"><h3>Changing Letting Agent</h3></a><p>How switching to us works, and what we take care of during the handover.</p></div>
+      <div class="card"><a class="card-link" href="/landlords/property-compliance.html"><h3>Landlord Compliance Checklist</h3></a><p>Gas, electrical, EPC, alarms, deposits and right-to-rent: what the law requires.</p></div>
+      <div class="card"><a class="card-link" href="/property-insights/renters-rights-act-landlord-guide.html"><h3>Renters' Rights Act Guide</h3></a><p>What changed on 1 May 2026, and what it means for your tenancies.</p></div>
+      <div class="card"><a class="card-link" href="/property-insights/should-i-manage-my-rental-property-myself.html"><h3>Should I Manage It Myself?</h3></a><p>An honest look at when self-managing works and when it doesn't.</p></div>
+      <div class="card"><a class="card-link" href="/services/property-maintenance.html"><h3>Maintenance and Refurbishment</h3></a><p>Repairs, planned work and refurbishments between tenancies.</p></div>
+    </div>
+  </div>
+</section>
+
+{% include testimonials.html %}
+
+<section class="section" id="valuation" aria-labelledby="form-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="form-heading">Ask for a free rental valuation</h2>
+      <p>Tell us a little about the property and we'll call you to arrange a visit. There's no obligation.</p>
+      <p>Prefer to talk? Call <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a> or <a href="tel:{{ c.phone2_link }}">{{ c.phone2 }}</a>.</p>
+    </div>
+    <div class="form-panel">
+      {% include form-landlord.html %}
+    </div>
+  </div>
+</section>

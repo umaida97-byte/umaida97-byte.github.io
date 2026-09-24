@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% assign c = site.data.company %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li>{% if page.listing == "sale" %}<li><a href="/property-for-sale/">Properties for Sale</a></li>{% else %}<li><a href="/property-to-rent/">Properties to Rent</a></li>{% endif %}<li>{{ page.title }}</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap">
+    <p class="pc-status">{{ page.status }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="property-price">{% if page.listing == "sale" %}{{ page.price }}{% else %}{{ page.price }} per month{% endif %}</p>
+    <div class="property-detail">
+      <div>
+        {% if page.images %}<div class="property-gallery">
+          {% for img in page.images %}<img src="{{ img }}" alt="{{ page.title }}, photo {{ forloop.index }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" decoding="async">
+          {% endfor %}
+        </div>{% endif %}
+        <h2>About this property</h2>
+        {{ content }}
+        {% if page.features %}<h2>Features</h2>
+        <ul class="feature-list">{% for item in page.features %}<li>{{ item }}</li>{% endfor %}</ul>{% endif %}
+      </div>
+      <aside>
+        <dl class="key-facts">
+          <div><dt>{% if page.listing == "sale" %}Price{% else %}Rent{% endif %}</dt><dd>{{ page.price }}{% if page.listing != "sale" %} pcm{% endif %}</dd></div>
+          {% if page.listing != "sale" %}<div><dt>Deposit</dt><dd>{{ page.deposit | default: site.data.fees.tenants.deposit }}</dd></div>
+          <div><dt>Available</dt><dd>{{ page.available }}</dd></div>
+          <div><dt>Furnishing</dt><dd>{{ page.furnishing }}</dd></div>{% endif %}
+          <div><dt>Bedrooms</dt><dd>{{ page.bedrooms }}</dd></div>
+          <div><dt>Bathrooms</dt><dd>{{ page.bathrooms }}</dd></div>
+          <div><dt>Property type</dt><dd>{{ page.property_type }}</dd></div>
+          <div><dt>Area</dt><dd>{{ page.area }}</dd></div>
+          <div><dt>EPC rating</dt><dd>{{ page.epc }}</dd></div>
+          <div><dt>Council tax band</dt><dd>{{ page.council_tax }}</dd></div>
+        </dl>
+        <div class="form-panel">
+          <h2>Request a viewing</h2>
+          <p>Or call <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a> quoting "{{ page.title }}".</p>
+          {% include form-viewing.html %}
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

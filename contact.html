@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Contact Five Towns Lettings | Letting Agents Stoke-on-Trent"
+description: "Contact Five Towns Lettings in Stoke-on-Trent. Call 07463 006088 or 07877 717402, email info@five-towns.co.uk, or send an enquiry online."
+---
+{% assign c = site.data.company %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Contact</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap grid-2">
+    <div>
+      <h1>Contact us</h1>
+      <p class="lede">Call, message or email and you'll speak to the family that runs the business.</p>
+      <ul class="contact-list">
+        <li>Phone: <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a></li>
+        <li>Phone: <a href="tel:{{ c.phone2_link }}">{{ c.phone2 }}</a></li>
+        <li>WhatsApp: <a href="https://wa.me/{{ c.whatsapp }}" target="_blank" rel="noopener">{{ c.phone }}</a></li>
+        <li>Email: <a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+      </ul>
+      <h2>Phone lines are open</h2>
+      <dl class="facts">
+        {% for h in c.hours %}<div><dt>{{ h.days }}</dt><dd>{{ h.time }}</dd></div>
+        {% endfor %}
+      </dl>
+      <p>Tenants of properties we manage have a separate out-of-hours number for emergencies.</p>
+      <h2>Address</h2>
+      <p>{{ c.name }}<br>{{ c.address.street }}<br>{{ c.address.town }}, {{ c.address.county }}<br>{{ c.address.postcode }}</p>
+      <p>{{ c.visits_note }}</p>
+      <p><a class="btn-text" href="{{ c.google_profile }}" target="_blank" rel="noopener">Find us on Google</a></p>
+    </div>
+    <div class="form-panel">
+      <h2>Send us a message</h2>
+      {% include form-general.html %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="specific-heading">
+  <div class="wrap">
+    <div class="section-head"><h2 id="specific-heading">Looking for something specific?</h2></div>
+    <div class="card-grid card-grid--3">
+      <div class="card" id="valuation"><a class="card-link" href="/landlords/rental-valuation.html"><h3>Free Rental Valuation</h3></a><p>For landlords who want to know what their property could let for.</p></div>
+      <div class="card"><a class="card-link" href="/tenants/#register"><h3>Register as a tenant</h3></a><p>Tell us what you're looking for and we'll be in touch when something suitable comes up.</p></div>
+      <div class="card"><a class="card-link" href="/sales/#valuation"><h3>Sales valuation</h3></a><p>Thinking of selling? Book a valuation with us.</p></div>
+    </div>
+  </div>
+</section>

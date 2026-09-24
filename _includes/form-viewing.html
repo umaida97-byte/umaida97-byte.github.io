@@ -1,0 +1,14 @@
+<form class="lead-form" aria-label="Request a viewing" data-lead-form data-web3forms-key="{{ site.data.company.web3forms_key }}">
+  <input type="hidden" name="subject" value="Viewing request: {{ page.title }}">
+  <input type="hidden" name="from_name" value="Five Towns Lettings website">
+  <input type="hidden" name="form" value="Viewing request">
+  <input type="hidden" name="property" value="{{ page.title }} ({{ site.url }}{{ page.url }})">
+  {% include form-consent.html %}
+  <div class="form-field"><label for="vw-name">Full name</label><input id="vw-name" name="name" autocomplete="name" required></div>
+  <div class="form-field"><label for="vw-phone">Phone</label><input id="vw-phone" name="phone" type="tel" autocomplete="tel" required></div>
+  <div class="form-field"><label for="vw-email">Email</label><input id="vw-email" name="email" type="email" autocomplete="email" required></div>
+  <div class="form-field"><label for="vw-when">When suits you for a viewing? <span class="hint">(optional)</span></label><input id="vw-when" name="preferred_times"></div>
+  <p class="form-consent"><input id="vw-consent" type="checkbox" required><label for="vw-consent">I agree to be contacted about this property, in line with the <a href="/privacy-policy.html">privacy policy</a>.</label></p>
+  <button class="btn btn-primary" type="submit">Request a Viewing</button>
+  <p class="form-status" role="status" hidden></p>
+</form>

@@ -1,0 +1,115 @@
+---
+layout: default
+title: "Property Management Stoke-on-Trent | 12% inc VAT | Five Towns Lettings"
+description: "Full property management in Stoke-on-Trent for 12% of rent including VAT. Rent paid within about 5 working days, two inspections a year, out-of-hours emergency line."
+redirect_from:
+- /services/property-management.html
+- /landlords/rent-collection.html
+- /services/rent-collection.html
+- /property-insights/what-does-a-property-management-company-do.html
+- /property-insights/why-use-a-property-management-company-stoke-on-trent.html
+- /property-insights/how-much-does-property-management-cost.html
+---
+{% assign c = site.data.company %}{% assign f = site.data.fees %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/landlords/">Landlords</a></li><li>Property Management</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap">
+    <h1>Property management in Stoke-on-Trent</h1>
+    <p class="lede" style="max-width:60ch">We look after the tenancy from the day the tenant moves in to the day they leave. {{ f.full_management.inc_vat }} including VAT ({{ f.full_management.ex_vat }}), plus a one-off {{ f.full_management.setup_inc_vat }} set-up fee.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#quote">Request a Management Quote</a>
+      <a class="btn btn-outline" href="/landlords/change-letting-agent.html">Switching From Another Agent?</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="included-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="included-heading">What the monthly fee covers</h2>
+      <ul class="feature-list">
+        <li>Finding a tenant: from our own network first, then portals such as Zoopla if needed</li>
+        <li>Viewings, referencing and right-to-rent checks</li>
+        <li>Tenancy agreement, inventory and check-in</li>
+        <li>Registering the deposit with the Deposit Protection Service (DPS)</li>
+        <li>Collecting rent each month and chasing arrears</li>
+        <li>Paying rent to you around five working days after the tenant pays, unless we agree another date</li>
+        <li>A statement with every payment, and an invoice for every job</li>
+        <li>Two property inspections a year</li>
+        <li>Arranging repairs within a limit you set</li>
+        <li>An out-of-hours emergency line for your tenant</li>
+        <li>Rent review notices</li>
+        <li>Tracking gas, electrical and EPC renewal dates</li>
+        <li>Check-out at the end of the tenancy</li>
+      </ul>
+    </div>
+    <div>
+      <h2>What costs extra</h2>
+      <p>Only the one-off set-up fee and any safety certificates the property needs. There is no VAT on certificates.</p>
+      <table class="fee-table">
+        <tbody>
+          <tr><th scope="row">New property set-up</th><td>{{ f.full_management.setup_inc_vat }}</td></tr>
+          {% for item in f.compliance %}<tr><th scope="row">{{ item.name }}</th><td>{{ item.price }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p class="compare-note">Repairs are invoiced to you. Above the limit you've agreed with us, work only goes ahead once you've approved the quote. <a href="/fees.html">See all fees</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="repairs-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="repairs-heading">Repairs, on terms you set</h2>
+      <p>When you instruct us, we agree a spending limit per repair. A dripping tap or a faulty extractor fan below that limit gets fixed without a phone call to you. Anything above it, we quote and wait for your go-ahead. Either way, you receive the invoice.</p>
+      <p>Tenants have an out-of-hours number for genuine emergencies such as a leak, no heating in winter or a security problem, so issues aren't left until Monday.</p>
+    </div>
+    <div>
+      <h2>Inspections and reporting</h2>
+      <p>We inspect each managed property twice a year and tell you what we found: condition, any maintenance that's coming up, and anything the tenant has raised.</p>
+      <p>Rent is paid to you around five working days after the tenant pays, with a statement each time. If you'd prefer a fixed payment date, we can agree one with you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="who-heading">
+  <div class="wrap">
+    <div class="section-head wide">
+      <h2 id="who-heading">Who Full Management suits</h2>
+      <p>Landlords who live away from Stoke-on-Trent, own more than one property, don't have time for tenant calls and paperwork, or have had a poor experience with another agent. It also suits first-time landlords who want compliance handled properly from day one. If you'd rather run the tenancy yourself, <a href="/landlords/let-only.html">Let Only</a> may suit you better.</p>
+    </div>
+  </div>
+</section>
+
+{% include testimonials.html %}
+
+<section class="section" aria-labelledby="faq-heading">
+  <div class="wrap" style="max-width:74ch">
+    <h2 id="faq-heading">Questions landlords ask</h2>
+    <details class="faq-item"><summary>How much does property management cost in Stoke-on-Trent?</summary><p>Our Full Management fee is 12% of the monthly rent including VAT (10% + VAT), plus a one-off £180 set-up fee including VAT (£150 + VAT) for each new property. Inventory, check-in, check-out, deposit registration, the tenancy agreement and rent review notices are included.</p></details>
+    <details class="faq-item"><summary>What does a property management company actually do?</summary><p>It runs the tenancy for the landlord: finding and referencing tenants, collecting rent, arranging repairs, inspecting the property and keeping safety certificates and paperwork up to date.</p></details>
+    <details class="faq-item"><summary>When will I receive my rent?</summary><p>Around five working days after your tenant pays, unless we've agreed a different date with you. Each payment comes with a statement.</p></details>
+    <details class="faq-item"><summary>Do you offer rent collection on its own?</summary><p>Rent collection is part of Full Management. If you'd like to manage everything yourself after a tenant is found, our Let Only service is the alternative.</p></details>
+    <details class="faq-item"><summary>Can I switch to you from my current letting agent?</summary><p>Yes. Check your current agreement's notice period, give notice in writing, and we take care of the handover with your tenant. See <a href="/landlords/change-letting-agent.html">changing letting agent</a>.</p></details>
+  </div>
+</section>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much does property management cost in Stoke-on-Trent?","acceptedAnswer":{"@type":"Answer","text":"Five Towns Lettings charges 12% of the monthly rent including VAT (10% + VAT), plus a one-off £180 set-up fee including VAT (£150 + VAT) for each new property. Inventory, check-in, check-out, deposit registration, the tenancy agreement and rent review notices are included."}},
+{"@type":"Question","name":"What does a property management company actually do?","acceptedAnswer":{"@type":"Answer","text":"It runs the tenancy for the landlord: finding and referencing tenants, collecting rent, arranging repairs, inspecting the property and keeping safety certificates and paperwork up to date."}},
+{"@type":"Question","name":"When will I receive my rent?","acceptedAnswer":{"@type":"Answer","text":"Around five working days after the tenant pays, unless a different date has been agreed. Each payment comes with a statement."}},
+{"@type":"Question","name":"Do you offer rent collection on its own?","acceptedAnswer":{"@type":"Answer","text":"Rent collection is part of Full Management. Landlords who want to manage everything themselves after a tenant is found can choose Let Only."}},
+{"@type":"Question","name":"Can I switch to Five Towns Lettings from my current letting agent?","acceptedAnswer":{"@type":"Answer","text":"Yes. Check your current agreement's notice period, give notice in writing, and Five Towns Lettings handles the handover with your tenant."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Residential property management","name":"Full property management in Stoke-on-Trent","provider":{"@id":"{{ site.url }}/#organisation"},"areaServed":"Stoke-on-Trent","offers":{"@type":"Offer","description":"12% of monthly rent including VAT, plus £180 set-up fee including VAT"}}</script>
+
+<section class="section section--stone" id="quote" aria-labelledby="quote-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="quote-heading">Request a management quote</h2>
+      <p>Tell us about the property and we'll call you back. You can also call <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a>.</p>
+    </div>
+    <div class="form-panel">
+      {% include form-landlord.html %}
+    </div>
+  </div>
+</section>

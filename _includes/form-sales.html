@@ -1,0 +1,20 @@
+<form class="lead-form" aria-label="Sales valuation request" data-lead-form data-web3forms-key="{{ site.data.company.web3forms_key }}">
+  <input type="hidden" name="subject" value="Sales valuation request - website">
+  <input type="hidden" name="from_name" value="Five Towns Lettings website">
+  <input type="hidden" name="form" value="Sales valuation">
+  {% include form-consent.html %}
+  <div class="form-row">
+    <div class="form-field"><label for="sv-name">Full name</label><input id="sv-name" name="name" autocomplete="name" required></div>
+    <div class="form-field"><label for="sv-phone">Phone</label><input id="sv-phone" name="phone" type="tel" autocomplete="tel" required></div>
+  </div>
+  <div class="form-row">
+    <div class="form-field"><label for="sv-email">Email</label><input id="sv-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="form-field"><label for="sv-postcode">Property postcode</label><input id="sv-postcode" name="property_postcode" autocomplete="postal-code" required></div>
+  </div>
+  <div class="form-field"><label for="sv-time">When are you hoping to sell?</label>
+    <select id="sv-time" name="timescale"><option>As soon as possible</option><option>Within 3 months</option><option>3 to 6 months</option><option>Just want to know the value</option></select></div>
+  <div class="form-field"><label for="sv-message">Anything else? <span class="hint">(optional)</span></label><textarea id="sv-message" name="message" rows="3"></textarea></div>
+  <p class="form-consent"><input id="sv-consent" type="checkbox" required><label for="sv-consent">I agree to be contacted about this enquiry, in line with the <a href="/privacy-policy.html">privacy policy</a>.</label></p>
+  <button class="btn btn-primary" type="submit">Request a Sales Valuation</button>
+  <p class="form-status" role="status" hidden></p>
+</form>

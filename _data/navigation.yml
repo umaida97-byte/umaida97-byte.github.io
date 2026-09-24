@@ -1,0 +1,18 @@
+# Main menu. Add, remove or reorder items here - every page updates.
+main:
+  - title: Landlords
+    url: /landlords/
+  - title: Fees
+    url: /fees.html
+  - title: To Rent
+    url: /property-to-rent/
+  - title: Tenants
+    url: /tenants/
+  - title: Sell
+    url: /sales/
+  - title: Invest
+    url: /property-investment/
+  - title: About
+    url: /about.html
+  - title: Contact
+    url: /contact.html

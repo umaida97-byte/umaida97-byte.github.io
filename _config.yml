@@ -1,0 +1,41 @@
+# ------------------------------------------------------------------
+# Five Towns Lettings - site settings
+# GitHub Pages reads this file automatically. After editing, commit
+# and push; the site rebuilds in a minute or two.
+# ------------------------------------------------------------------
+
+title: Five Towns Lettings
+url: "https://five-towns.co.uk"   # the live domain - used for canonical URLs, sitemap and social previews
+baseurl: ""
+
+# PRE-LAUNCH SWITCH
+# true  = search engines are told NOT to index the site (use while it's a preview)
+# false = normal indexing (set this to false on go-live day - see README.md)
+staging_noindex: true
+
+lang: en-GB
+timezone: Europe/London
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+collections:
+  properties:
+    output: true
+    permalink: /properties/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: properties
+    values:
+      layout: property
+
+exclude:
+  - README.md
+  - PROPERTY-TEMPLATE.md

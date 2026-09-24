@@ -1,0 +1,11 @@
+<article class="property-card">
+  <a href="{{ p.url }}">
+    {% if p.images %}<figure><img src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy" decoding="async"></figure>{% endif %}
+    <div class="pc-body">
+      <p class="pc-status{% if p.status != 'Available' and p.status != 'For Sale' %} pc-status--let{% endif %}">{{ p.status }}</p>
+      <p class="pc-price">{{ p.price }}{% if p.listing != "sale" %} pcm{% endif %}</p>
+      <h3 class="pc-address">{{ p.title }}</h3>
+      <p class="pc-meta">{{ p.bedrooms }} bed {{ p.property_type | downcase }}, {{ p.area }}</p>
+    </div>
+  </a>
+</article>

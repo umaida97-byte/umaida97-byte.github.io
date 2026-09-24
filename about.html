@@ -1,0 +1,58 @@
+---
+layout: default
+title: "About Five Towns Lettings | Family-Run Letting Agent, Stoke-on-Trent"
+description: "Five Towns Lettings is a family-run letting agent in Stoke-on-Trent. Letting property locally since 2000, incorporated in 2011, managing 150+ properties for 50+ landlords."
+---
+{% assign c = site.data.company %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>About</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap" style="max-width:74ch">
+    <h1>A family business, letting property in Stoke-on-Trent since {{ c.letting_since }}</h1>
+    <p class="lede">The Jabbar family has let property in the Potteries since {{ c.letting_since }}. Aftab and Sophie Jabbar founded the company in {{ c.incorporated }}. Today the second generation, Umaid Ahmad and Iman Jabbar, work alongside them to grow the business, which now manages more than {{ c.portfolio.properties }} properties for over {{ c.portfolio.landlords }} landlords.</p>
+    {% include trust-strip.html %}
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="team-heading">
+  <div class="wrap">
+    <h2 id="team-heading">The family behind the business</h2>
+    <div class="team-grid">
+      {% for p in c.team %}<div class="team-member"><h3>{{ p.name }}</h3><p>{{ p.role }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="approach-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="approach-heading">How we work</h2>
+      <p>We're landlords ourselves, so we manage every property the way we'd want ours managed. That means referencing tenants properly, answering the phone, doing the inspections we say we'll do, and giving landlords a realistic rent figure rather than the one that wins the instruction.</p>
+      <p>Much of our letting happens through the network of tenants and landlords we've built up over the years. When a property needs wider marketing, we advertise on portals such as Zoopla.</p>
+      <p>Because we also handle sales, maintenance, refurbishment and investment sourcing, we can give a straight answer when a landlord is deciding whether to sell, refurbish or re-let.</p>
+    </div>
+    <div>
+      <img class="inline-photo" src="/assets/images/burslem-street.jpg" srcset="/assets/images/burslem-street-800.jpg 800w, /assets/images/burslem-street.jpg 1600w" sizes="(min-width: 980px) 50vw, 100vw" alt="Historic buildings in Burslem town centre, Stoke-on-Trent" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="facts-heading">
+  <div class="wrap" style="max-width:74ch">
+    <h2 id="facts-heading">Company information</h2>
+    <dl class="facts">
+      <div><dt>Trading name</dt><dd>{{ c.name }}</dd></div>
+      <div><dt>Registered company</dt><dd>{{ c.legal_name }}, registered in England &amp; Wales, company no. {{ c.company_number }}</dd></div>
+      <div><dt>Letting property since</dt><dd>{{ c.letting_since }} (company incorporated {{ c.incorporated }})</dd></div>
+      <div><dt>Registered office</dt><dd>{{ c.address.street }}, {{ c.address.town }}, {{ c.address.county }}, {{ c.address.postcode }}. {{ c.visits_note }}</dd></div>
+      <div><dt>Services</dt><dd>Letting, full property management, HMO and portfolio management, maintenance, refurbishment, property sales, property sourcing and investment advice</dd></div>
+      <div><dt>Areas covered</dt><dd>Stoke-on-Trent (Hanley, Burslem, Tunstall, Stoke, Fenton and Longton), Newcastle-under-Lyme and surrounding areas</dd></div>
+      <div><dt>Portfolio</dt><dd>More than {{ c.portfolio.properties }} properties for over {{ c.portfolio.landlords }} landlords</dd></div>
+      <div><dt>Memberships</dt><dd>{{ c.memberships.nrla }}; {{ c.memberships.redress }} ({{ c.memberships.redress_number }}); {{ c.memberships.cmp }} ({{ c.memberships.cmp_number }})</dd></div>
+      <div><dt>Contact</dt><dd><a href="tel:{{ c.phone_link }}">{{ c.phone }}</a>, <a href="tel:{{ c.phone2_link }}">{{ c.phone2 }}</a>, <a href="mailto:{{ c.email }}">{{ c.email }}</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+{% include testimonials.html %}
+{% include cta-band.html %}

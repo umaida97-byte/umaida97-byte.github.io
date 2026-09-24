@@ -1,0 +1,50 @@
+# ------------------------------------------------------------------
+# Fees shown on the Fees page, the landlord pages and the comparison
+# table. UK law (Consumer Rights Act 2015) requires fees to be shown
+# INCLUDING VAT, so the "inc_vat" figure is the one displayed first.
+# ------------------------------------------------------------------
+
+let_only:
+  name: Let Only
+  inc_vat: "£420"
+  ex_vat: £350 + VAT
+  basis: One-off fee, charged when the tenancy starts
+
+full_management:
+  name: Full Management
+  inc_vat: 12% of the monthly rent
+  ex_vat: 10% + VAT
+  basis: Charged each month on rent collected
+  setup_inc_vat: "£180"
+  setup_ex_vat: £150 + VAT
+  setup_basis: One-off fee when a new property is taken on
+  included:
+    - Inventory
+    - Check-in and check-out
+    - Deposit registration
+    - Tenancy agreement
+    - Rent review notices
+    - Two inspections a year
+    - Statements with every payment and an invoice for every job
+
+# Certificates are carried out by our maintenance company, which is not
+# VAT registered, so no VAT is added to these prices.
+compliance:
+  - name: Gas safety certificate
+    price: "£75"
+  - name: Energy Performance Certificate (EPC)
+    price: "£75"
+  - name: Electrical Installation Condition Report (EICR)
+    price: "£175"
+
+sales:
+  name: Sales
+  inc_vat: 1.2% of the sale price
+  ex_vat: 1% + VAT
+  minimum_inc_vat: "£1,200"
+  minimum_ex_vat: £1,000 + VAT
+
+tenants:
+  deposit: One month's rent
+  holding_deposit: false        # we don't take holding deposits
+  deposit_scheme: Deposit Protection Service (DPS)

@@ -1,0 +1,19 @@
+<form class="lead-form" aria-label="General enquiry" data-lead-form data-web3forms-key="{{ site.data.company.web3forms_key }}">
+  <input type="hidden" name="subject" value="General enquiry - website">
+  <input type="hidden" name="from_name" value="Five Towns Lettings website">
+  <input type="hidden" name="form" value="General enquiry">
+  {% include form-consent.html %}
+  <div class="form-row">
+    <div class="form-field"><label for="ge-name">Full name</label><input id="ge-name" name="name" autocomplete="name" required></div>
+    <div class="form-field"><label for="ge-phone">Phone <span class="hint">(optional)</span></label><input id="ge-phone" name="phone" type="tel" autocomplete="tel"></div>
+  </div>
+  <div class="form-row">
+    <div class="form-field"><label for="ge-email">Email</label><input id="ge-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="form-field"><label for="ge-type">I am a</label>
+      <select id="ge-type" name="enquirer_type"><option>Landlord</option><option>Tenant or prospective tenant</option><option>Property investor</option><option>Seller</option><option>Buyer</option><option>Other</option></select></div>
+  </div>
+  <div class="form-field"><label for="ge-message">How can we help?</label><textarea id="ge-message" name="message" rows="4" required></textarea></div>
+  <p class="form-consent"><input id="ge-consent" type="checkbox" required><label for="ge-consent">I agree to be contacted about this enquiry, in line with the <a href="/privacy-policy.html">privacy policy</a>.</label></p>
+  <button class="btn btn-primary" type="submit">Send Enquiry</button>
+  <p class="form-status" role="status" hidden></p>
+</form>

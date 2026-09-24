@@ -1,0 +1,25 @@
+<form class="lead-form" aria-label="Register your rental requirements" data-lead-form data-web3forms-key="{{ site.data.company.web3forms_key }}">
+  <input type="hidden" name="subject" value="Tenant registration - website">
+  <input type="hidden" name="from_name" value="Five Towns Lettings website">
+  <input type="hidden" name="form" value="Tenant registration">
+  {% include form-consent.html %}
+  <div class="form-row">
+    <div class="form-field"><label for="tn-name">Full name</label><input id="tn-name" name="name" autocomplete="name" required></div>
+    <div class="form-field"><label for="tn-phone">Phone</label><input id="tn-phone" name="phone" type="tel" autocomplete="tel" required></div>
+  </div>
+  <div class="form-row">
+    <div class="form-field"><label for="tn-email">Email</label><input id="tn-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="form-field"><label for="tn-areas">Areas you'd like to live in</label><input id="tn-areas" name="areas" placeholder="e.g. Hanley, Burslem, Newcastle"></div>
+  </div>
+  <div class="form-row">
+    <div class="form-field"><label for="tn-beds">Bedrooms</label>
+      <select id="tn-beds" name="bedrooms"><option>Studio / room</option><option>1</option><option selected>2</option><option>3</option><option>4+</option></select></div>
+    <div class="form-field"><label for="tn-budget">Maximum rent (£ per month)</label><input id="tn-budget" name="max_rent_pcm" inputmode="numeric"></div>
+  </div>
+  <div class="form-field"><label for="tn-move">When would you like to move?</label>
+    <select id="tn-move" name="move_date"><option>As soon as possible</option><option>Within 1 month</option><option>1 to 3 months</option><option>Just looking</option></select></div>
+  <div class="form-field"><label for="tn-message">Anything else? <span class="hint">(optional, e.g. parking, garden, a pet you'd like to bring)</span></label><textarea id="tn-message" name="message" rows="3"></textarea></div>
+  <p class="form-consent"><input id="tn-consent" type="checkbox" required><label for="tn-consent">I agree to be contacted about suitable properties, in line with the <a href="/privacy-policy.html">privacy policy</a>.</label></p>
+  <button class="btn btn-primary" type="submit">Register My Requirements</button>
+  <p class="form-status" role="status" hidden></p>
+</form>
