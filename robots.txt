@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://umaida97-byte.github.io/sitemap.xml
