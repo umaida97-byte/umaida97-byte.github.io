@@ -1,0 +1,25 @@
+{% assign f = site.data.fees %}<div class="compare" role="region" aria-label="Compare landlord services" tabindex="0">
+  <table class="compare-table">
+    <caption class="visually-hidden">Five Towns Lettings landlord services and fees, including VAT</caption>
+    <thead>
+      <tr><th scope="col">What's included</th><th scope="col">{{ f.let_only.name }}</th><th scope="col" class="is-featured">{{ f.full_management.name }}</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Fee (including VAT)</th><td><strong>{{ f.let_only.inc_vat }}</strong><br><span class="hint">{{ f.let_only.ex_vat }}. {{ f.let_only.basis }}</span></td><td class="is-featured"><strong>{{ f.full_management.inc_vat }}</strong><br><span class="hint">{{ f.full_management.ex_vat }}. Plus a one-off {{ f.full_management.setup_inc_vat }} set-up fee ({{ f.full_management.setup_ex_vat }})</span></td></tr>
+      <tr><th scope="row">Rental valuation and marketing advice</th><td>Yes</td><td class="is-featured">Yes</td></tr>
+      <tr><th scope="row">Finding a tenant (our network, then portals such as Zoopla)</th><td>Yes</td><td class="is-featured">Yes</td></tr>
+      <tr><th scope="row">Viewings, referencing and right-to-rent checks</th><td>Yes</td><td class="is-featured">Yes</td></tr>
+      <tr><th scope="row">Tenancy agreement</th><td>Yes</td><td class="is-featured">Yes</td></tr>
+      <tr><th scope="row">Inventory, check-in and check-out</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Deposit registration</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Monthly rent collection and arrears chasing</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Statement with every payment, invoice for every job</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Two property inspections a year</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Repairs arranged, within a limit you set</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Rent review notices</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Out-of-hours emergency line for tenants</th><td>&ndash;</td><td class="is-featured">Included</td></tr>
+      <tr><th scope="row">Compliance tracking (gas, EICR, EPC)</th><td>&ndash;</td><td class="is-featured">Included; certificates charged as below</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="compare-note">Safety certificates, when needed:{% for item in f.compliance %} {{ item.name }} {{ item.price }}{% if forloop.last %}.{% else %};{% endif %}{% endfor %} No VAT is added to certificates. <a href="/fees.html">See all fees</a>.</p>

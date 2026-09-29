@@ -1,0 +1,10 @@
+{% assign c = site.data.company %}<section class="section section--ink cta-band" aria-labelledby="cta-band-heading">
+  <div class="wrap">
+    <h2 id="cta-band-heading">Find out what your property could let for</h2>
+    <p>A free, no-obligation rental valuation from a local family team that has let property in Stoke-on-Trent since {{ c.letting_since }}.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/landlords/rental-valuation.html">Get a Free Rental Valuation</a>
+      <a class="btn btn-outline" href="tel:{{ c.phone_link }}">Call {{ c.phone }}</a>
+    </div>
+  </div>
+</section>
