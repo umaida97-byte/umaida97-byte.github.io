@@ -1,0 +1,58 @@
+---
+layout: default
+title: "Renting a Home in Stoke-on-Trent | Tenant Information | Five Towns Lettings"
+description: "Renting with Five Towns Lettings in Stoke-on-Trent: how to apply, referencing, your deposit, what you can be charged, and how to register for new properties."
+---
+{% assign c = site.data.company %}{% assign f = site.data.fees %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Tenants</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap" style="max-width:74ch">
+    <h1>Renting a home with Five Towns Lettings</h1>
+    <p class="lede">We let homes across Stoke-on-Trent and nearby. Many are let to people who have registered with us before they're ever advertised, so it's worth telling us what you're looking for.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#register">Register Your Requirements</a>
+      <a class="btn btn-outline" href="/property-to-rent/">See Properties to Rent</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--stone" aria-labelledby="how-heading">
+  <div class="wrap" style="max-width:74ch">
+    <h2 id="how-heading">How renting with us works</h2>
+    <ol class="steps">
+      <li><strong>Register or enquire</strong>Tell us what you need, or ask about a property you've seen.</li>
+      <li><strong>View the property</strong>We arrange a viewing at a time that suits you.</li>
+      <li><strong>Apply and be referenced</strong>We check identity and right to rent, income or affordability, and previous landlord references. Referencing is free for tenants.</li>
+      <li><strong>Sign and move in</strong>You sign the tenancy agreement, pay the deposit and first month's rent, and we check you in with an inventory.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="costs-heading">
+  <div class="wrap" style="max-width:74ch">
+    <h2 id="costs-heading">What it costs to move in</h2>
+    <table class="fee-table">
+      <tbody>
+        <tr><th scope="row">Tenancy deposit</th><td>{{ f.tenants.deposit }}</td></tr>
+        <tr><th scope="row">Holding deposit</th><td>None. We don't take holding deposits.</td></tr>
+        <tr><th scope="row">Rent</th><td>As advertised, paid monthly</td></tr>
+      </tbody>
+    </table>
+    <p>Your deposit is protected with the {{ f.tenants.deposit_scheme }}, a government-approved scheme. Under the Tenant Fees Act 2019, we can't charge you for viewings, referencing or your tenancy agreement.</p>
+    <h2>Your tenancy</h2>
+    <p>Since 1 May 2026, tenancies in England are periodic, with no fixed end date. You can end yours by giving two months' notice. Rent can only be increased once a year, with proper notice. You can ask to keep a pet, and your landlord can't unreasonably refuse.</p>
+    <h2>Repairs and emergencies</h2>
+    <p>If we manage your home, report repairs to us by phone, email or WhatsApp. For genuine emergencies outside office hours, such as a serious leak, loss of heating in winter, or a security problem, use the out-of-hours number we give you when you move in.</p>
+  </div>
+</section>
+
+<section class="section section--stone" id="register" aria-labelledby="register-heading">
+  <div class="wrap grid-2">
+    <div>
+      <h2 id="register-heading">Tell us what you're looking for</h2>
+      <p>We'll contact you when a suitable property comes up, often before it's advertised.</p>
+      <p>Or call <a href="tel:{{ c.phone_link }}">{{ c.phone }}</a> / <a href="tel:{{ c.phone2_link }}">{{ c.phone2 }}</a>.</p>
+    </div>
+    <div class="form-panel">{% include form-tenant.html %}</div>
+  </div>
+</section>
