@@ -65,6 +65,32 @@
     img.setAttribute("decoding", "async");
   });
 
+  /* Enquiry tracking for Google Analytics. These only send anything if the
+     visitor has accepted analytics cookies (gtag is only loaded after Accept). */
+  function track(eventName, params) {
+    if (typeof window.gtag !== "function") return;
+    params = params || {};
+    params.page_path = window.location.pathname;
+    window.gtag("event", eventName, params);
+  }
+  function linkLocation(el) {
+    if (el.closest(".site-header")) return "header";
+    if (el.closest(".site-footer")) return "footer";
+    if (el.classList.contains("whatsapp-fab")) return "floating button";
+    return "page content";
+  }
+  document.addEventListener("click", function (evt) {
+    var link = evt.target.closest ? evt.target.closest("a[href]") : null;
+    if (!link) return;
+    var href = link.getAttribute("href") || "";
+    var method = null;
+    if (href.indexOf("tel:") === 0) method = "phone";
+    else if (href.indexOf("https://wa.me/") === 0) method = "whatsapp";
+    else if (href.indexOf("mailto:") === 0) method = "email";
+    if (!method) return;
+    track("contact_click", { contact_method: method, link_location: linkLocation(link), link_text: href.replace(/^(tel:|mailto:)/, "").split("?")[0] });
+  });
+
   /* Lead forms: submitted to Web3Forms (https://web3forms.com), which emails
      each enquiry to the inbox linked to the access key. The key lives in
      _data/company.yml (web3forms_key). */
@@ -99,6 +125,8 @@
         .then(function (res) { return res.json(); })
         .then(function (data) {
           if (data.success) {
+            var formName = (form.querySelector('input[name="form"]') || {}).value || "Website form";
+            track("generate_lead", { form_name: formName });
             showStatus("Thank you. Your enquiry has been sent. We'll be in touch shortly.");
             form.reset();
           } else {
