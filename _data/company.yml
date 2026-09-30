@@ -67,7 +67,7 @@ team:
 # Google Analytics 4 measurement ID (looks like G-ABC123XYZ).
 # Leave blank ("") to switch analytics off. When set, a cookie consent
 # banner appears and Analytics only loads if the visitor clicks Accept.
-ga4_id: ""
+ga4_id: "G-XEC7JKRD28"
 
 # Google Search Console HTML-tag verification code (optional).
 # Paste only the content="..." value Google gives you.
