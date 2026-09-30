@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Portfolio & HMO Management Stoke-on-Trent | Five Towns Lettings"
+description: "Management for landlords with several rental properties or HMOs in Stoke-on-Trent. We look after 150+ properties for 50+ landlords."
+---
+{% assign c = site.data.company %}
+<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/landlords/">Landlords</a></li><li>Portfolio Management</li></ol></nav>
+<section class="section section--tight">
+  <div class="wrap" style="max-width:74ch">
+    <h1>Portfolio and HMO management in Stoke-on-Trent</h1>
+    <p class="lede">We manage more than {{ c.portfolio.properties }} properties for over {{ c.portfolio.landlords }} landlords, and several of them have portfolios of their own. We're landlords too, so we know what running more than one property involves.</p>
+    <h2>How we handle a portfolio</h2>
+    <ul class="feature-list">
+      <li>The same standard on every property: two inspections a year, compliance dates tracked, repairs within the limit you set</li>
+      <li>A statement with every payment and an invoice for every job, so your accounts are straightforward</li>
+      <li>Our network of tenants helps fill vacancies quickly as properties come free</li>
+      <li>Maintenance and refurbishment when a property needs work between tenancies</li>
+      <li>Sourcing and investment advice if you're adding to the portfolio</li>
+    </ul>
+    <h2>HMOs</h2>
+    <p>Houses in multiple occupation carry extra rules on licensing, fire safety and room sizes, and more tenants to manage. We manage HMOs as part of Full Management. Licensing requirements are set by the council, so check <a href="https://www.stoke.gov.uk" rel="noopener" target="_blank">Stoke-on-Trent City Council</a> for the current position for your property, or ask us.</p>
+    <h2>Fees</h2>
+    <p>Portfolios are managed on our standard Full Management terms: 12% of the rent including VAT, and a one-off £180 set-up fee including VAT per property. <a href="/fees.html">See all fees</a>.</p>
+    <div class="cta-row"><a class="btn btn-primary" href="/landlords/rental-valuation.html">Talk to Us About Your Portfolio</a><a class="btn btn-outline" href="tel:{{ c.phone_link }}">Call {{ c.phone }}</a></div>
+  </div>
+</section>
+{% include testimonials.html %}
