@@ -1,0 +1,24 @@
+{% assign c = site.data.company %}<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/"><img class="logo-img" src="/assets/images/logo-mark.png" alt="{{ c.name }} home" width="160" height="48"></a>
+    <nav class="nav-primary" aria-label="Primary">
+      <ul>
+        {% for item in site.data.navigation.main %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <a class="header-phone" href="tel:{{ c.phone_link }}" aria-label="Call {{ c.name }} on {{ c.phone }}">{{ c.phone }}</a>
+    <a class="btn btn-primary header-cta" href="/landlords/rental-valuation.html">Free Rental Valuation</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile">
+    <ul>
+      {% for item in site.data.navigation.main %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <a class="btn btn-outline mobile-call" href="tel:{{ c.phone_link }}">Call {{ c.phone }}</a>
+    <a class="btn btn-primary header-cta" href="/landlords/rental-valuation.html">Free Rental Valuation</a>
+  </nav>
+</header>

@@ -1,0 +1,49 @@
+{% assign ga = site.data.company.ga4_id %}{% if ga and ga != "" %}<div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+  <p>We'd like to use analytics cookies to understand how people use our website, so we can improve it. They're only set if you accept. <a href="/cookie-policy.html">Cookie policy</a></p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-outline" data-consent="denied">Reject</button>
+    <button type="button" class="btn btn-primary" data-consent="granted">Accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var GA_ID = "{{ ga }}";
+  var KEY = "ft-analytics-consent";
+  var banner = document.getElementById("consent-banner");
+  function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function loadGA() {
+    if (window.__gaLoaded) return; window.__gaLoaded = true;
+    var s = document.createElement("script");
+    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date());
+    gtag("config", GA_ID);
+  }
+  function clearGA() {
+    document.cookie.split(";").forEach(function (c) {
+      var name = c.split("=")[0].trim();
+      if (name.indexOf("_ga") === 0) {
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=." + location.hostname.replace(/^www\./, "");
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+      }
+    });
+  }
+  var choice = read();
+  if (choice === "granted") { loadGA(); } else if (!choice) { banner.hidden = false; }
+  banner.addEventListener("click", function (e) {
+    var v = e.target.getAttribute("data-consent");
+    if (!v) return;
+    save(v); banner.hidden = true;
+    if (v === "granted") { loadGA(); } else { clearGA(); }
+  });
+  document.querySelectorAll("[data-cookie-settings]").forEach(function (link) {
+    link.hidden = false;
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); banner.hidden = false; banner.querySelector("button").focus();
+    });
+  });
+})();
+</script>{% endif %}

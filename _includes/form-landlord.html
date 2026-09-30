@@ -1,0 +1,26 @@
+<form class="lead-form" aria-label="Free rental valuation request" data-lead-form data-web3forms-key="{{ site.data.company.web3forms_key }}">
+  <input type="hidden" name="subject" value="Rental valuation request - website">
+  <input type="hidden" name="from_name" value="Five Towns Lettings website">
+  <input type="hidden" name="form" value="Landlord rental valuation">
+  {% include form-consent.html %}
+  <div class="form-row">
+    <div class="form-field"><label for="ll-name">Full name</label><input id="ll-name" name="name" autocomplete="name" required></div>
+    <div class="form-field"><label for="ll-phone">Phone</label><input id="ll-phone" name="phone" type="tel" autocomplete="tel" required></div>
+  </div>
+  <div class="form-row">
+    <div class="form-field"><label for="ll-email">Email</label><input id="ll-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="form-field"><label for="ll-postcode">Property postcode</label><input id="ll-postcode" name="property_postcode" autocomplete="postal-code" required></div>
+  </div>
+  <div class="form-row">
+    <div class="form-field"><label for="ll-beds">Bedrooms</label>
+      <select id="ll-beds" name="bedrooms"><option>Studio</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option><option>HMO / multiple rooms</option></select></div>
+    <div class="form-field"><label for="ll-status">The property is currently</label>
+      <select id="ll-status" name="current_status"><option>Empty / ready to let</option><option>Let, and I manage it myself</option><option>Let through another agent</option><option>Being bought or refurbished</option><option>I have several properties</option></select></div>
+  </div>
+  <div class="form-field"><label for="ll-service">Service you're interested in</label>
+    <select id="ll-service" name="service"><option>Full Management</option><option>Let Only</option><option>Not sure yet - please advise</option></select></div>
+  <div class="form-field"><label for="ll-message">Anything else we should know? <span class="hint">(optional)</span></label><textarea id="ll-message" name="message" rows="3"></textarea></div>
+  <p class="form-consent"><input id="ll-consent" type="checkbox" required><label for="ll-consent">I agree to be contacted about this enquiry, in line with the <a href="/privacy-policy.html">privacy policy</a>.</label></p>
+  <button class="btn btn-primary" type="submit">Request My Free Rental Valuation</button>
+  <p class="form-status" role="status" hidden></p>
+</form>
