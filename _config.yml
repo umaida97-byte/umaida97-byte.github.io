@@ -11,7 +11,7 @@ baseurl: ""
 # PRE-LAUNCH SWITCH
 # true  = search engines are told NOT to index the site (use while it's a preview)
 # false = normal indexing (set this to false on go-live day - see README.md)
-staging_noindex: true
+staging_noindex: false
 
 lang: en-GB
 timezone: Europe/London
