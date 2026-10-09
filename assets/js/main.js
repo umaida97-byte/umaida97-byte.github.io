@@ -48,15 +48,45 @@
     });
   }
 
-  /* Mark current nav link for a11y / styling */
-  var here = location.pathname.replace(/\/index\.html$/, "/");
+  /* Mark current nav link for a11y / styling, and highlight the top-level
+     item whose section the visitor is in (e.g. Landlords on a landlord page). */
+  function cleanPath(p) { return p.replace(/\/index\.html$/, "/"); }
+  var here = cleanPath(location.pathname);
+  var topUrls = [];
+  document.querySelectorAll(".nav-primary > ul > li > a").forEach(function (a) { topUrls.push(cleanPath(a.pathname)); });
   document.querySelectorAll(".nav-primary a, .nav-mobile a").forEach(function (a) {
-    var href = a.getAttribute("href");
-    if (!href) return;
-    var normalised = href.replace(/\/index\.html$/, "/");
-    if (normalised === here || (normalised !== "/" && here.indexOf(normalised) === 0)) {
-      a.setAttribute("aria-current", "page");
+    if (a.hash) return;
+    if (cleanPath(a.pathname) === here) a.setAttribute("aria-current", "page");
+  });
+  document.querySelectorAll(".nav-primary > ul > li, .nav-mobile > ul > li").forEach(function (li) {
+    var top = li.querySelector(":scope > a, :scope > .mobile-row > a");
+    if (!top) return;
+    var topPath = cleanPath(top.pathname);
+    var inSection = topPath !== "/" && here.indexOf(topPath) === 0 && topPath.slice(-1) === "/";
+    li.querySelectorAll("ul a").forEach(function (child) {
+      var childPath = cleanPath(child.pathname);
+      if (!child.hash && childPath === here && topUrls.indexOf(childPath) === -1) inSection = true;
+    });
+    if (inSection) top.classList.add("is-section");
+  });
+
+  /* Mobile accordion sub-menus */
+  document.querySelectorAll(".nav-mobile .sub-toggle").forEach(function (btn) {
+    var panel = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!panel) return;
+    function setOpen(open) {
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      panel.hidden = !open;
     }
+    btn.addEventListener("click", function () { setOpen(btn.getAttribute("aria-expanded") !== "true"); });
+    if (panel.querySelector('[aria-current="page"]')) setOpen(true);
+  });
+
+  /* Escape closes an open desktop dropdown */
+  document.addEventListener("keydown", function (evt) {
+    if (evt.key !== "Escape") return;
+    var active = document.activeElement;
+    if (active && active.closest && active.closest(".nav-primary .has-dropdown")) active.blur();
   });
 
   /* Lazy-loaded images: ensure loading=lazy + async decoding where markup forgot it */
