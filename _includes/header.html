@@ -3,8 +3,15 @@
     <a class="logo" href="/"><img class="logo-img" src="/assets/images/logo-mark.png" alt="{{ c.name }} home" width="160" height="48"></a>
     <nav class="nav-primary" aria-label="Primary">
       <ul>
-        {% for item in site.data.navigation.main %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
+        {% for item in site.data.navigation.main %}{% if item.children %}<li class="has-dropdown">
+          <a href="{{ item.url }}" aria-haspopup="true">{{ item.title | escape }}</a>
+          <ul class="dropdown{% if item.align == 'right' %} dropdown--right{% endif %}">
+            {% for child in item.children %}<li><a href="{{ child.url }}">{{ child.title | escape }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}<li><a href="{{ item.url }}">{{ item.title | escape }}</a></li>
+        {% endif %}{% endfor %}
       </ul>
     </nav>
     <a class="header-phone" href="tel:{{ c.phone_link }}" aria-label="Call {{ c.name }} on {{ c.phone }}">{{ c.phone }}</a>
@@ -15,8 +22,18 @@
   </div>
   <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile">
     <ul>
-      {% for item in site.data.navigation.main %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>
-      {% endfor %}
+      {% for item in site.data.navigation.main %}{% if item.children %}{% assign sub_id = 'mobile-sub-' | append: forloop.index %}<li class="has-sub">
+        <div class="mobile-row">
+          <a href="{{ item.url }}">{{ item.title | escape }}</a>
+          <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="{{ sub_id }}" aria-label="Show {{ item.title }} pages"></button>
+        </div>
+        <ul class="mobile-sub" id="{{ sub_id }}" hidden>
+          {% for child in item.children %}<li><a href="{{ child.url }}">{{ child.title | escape }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% else %}<li><a href="{{ item.url }}">{{ item.title | escape }}</a></li>
+      {% endif %}{% endfor %}
     </ul>
     <a class="btn btn-outline mobile-call" href="tel:{{ c.phone_link }}">Call {{ c.phone }}</a>
     <a class="btn btn-primary header-cta" href="/landlords/rental-valuation.html">Free Rental Valuation</a>
