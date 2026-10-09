@@ -1,16 +1,69 @@
 # Main menu. Add, remove or reorder items here - every page updates.
+# An item with "children" becomes a dropdown (desktop hover/focus, mobile accordion).
+# The parent link itself still goes to its own page. Set "align: right" on the
+# last items so their dropdown doesn't run off the edge of the screen.
 main:
   - title: Landlords
     url: /landlords/
+    children:
+      - title: All Landlord Services
+        url: /landlords/
+      - title: Property Management
+        url: /landlords/property-management.html
+      - title: Let Only
+        url: /landlords/let-only.html
+      - title: Free Rental Valuation
+        url: /landlords/rental-valuation.html
+      - title: Portfolio & HMO Management
+        url: /landlords/portfolio-management.html
+      - title: Landlord Compliance
+        url: /landlords/property-compliance.html
+      - title: Change Letting Agent
+        url: /landlords/change-letting-agent.html
+      - title: Property Maintenance
+        url: /services/property-maintenance.html
   - title: Fees
     url: /fees.html
   - title: To Rent
     url: /property-to-rent/
   - title: Tenants
     url: /tenants/
+    children:
+      - title: Renting With Us
+        url: /tenants/
+      - title: Properties to Rent
+        url: /property-to-rent/
+      - title: Register Your Requirements
+        url: /tenants/#register
   - title: Invest
     url: /property-investment/
+    align: right
+    children:
+      - title: Property Investment
+        url: /property-investment/
+      - title: Buy-to-Let in Stoke-on-Trent
+        url: /property-investment/buy-to-let-stoke-on-trent.html
+      - title: HMO Investment
+        url: /property-investment/hmo-investment-stoke-on-trent.html
+      - title: Rental Yields
+        url: /property-investment/rental-yields-stoke-on-trent.html
+      - title: Best Areas to Invest
+        url: /property-investment/best-areas-to-invest-stoke-on-trent.html
+      - title: Property Sourcing
+        url: /services/property-sourcing.html
+      - title: Property Refurbishment
+        url: /services/property-refurbishment.html
   - title: About
     url: /about.html
+    align: right
+    children:
+      - title: About Us
+        url: /about.html
+      - title: Areas We Cover
+        url: /areas/
+      - title: Guides & Advice
+        url: /property-insights/
+      - title: Client Money Protection
+        url: /client-money-protection.html
   - title: Contact
     url: /contact.html
