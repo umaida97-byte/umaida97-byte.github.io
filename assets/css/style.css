@@ -285,6 +285,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .card a.card-link h3 { text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 160ms ease; }
 .card a.card-link:hover h3 { text-decoration-color: var(--glaze); }
 
+/* ---- Area tiles (photo links to area guides) ------------------------------*/
+.area-tiles { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: clamp(0.75rem, 2vw, 1.5rem); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 980px) { .area-tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.area-tile { display: flex; flex-direction: column; height: 100%; background: var(--white); border: 1px solid var(--grey-line); border-radius: var(--radius); color: inherit; text-decoration: none; overflow: hidden; transition: border-color 160ms ease, box-shadow 160ms ease; }
+.area-tile img, .area-tile-placeholder { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.area-tile img { transition: transform 300ms ease; }
+.area-tile-placeholder { display: flex; align-items: center; justify-content: center; text-align: center; background: var(--glaze); color: var(--white); font-family: var(--font-display); font-size: var(--step-1); line-height: 1.2; padding: 1rem; }
+.area-tile-body { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.9rem 1rem 1.1rem; }
+.area-tile-name { font-family: var(--font-display); font-size: var(--step-1); line-height: 1.2; overflow-wrap: anywhere; }
+.area-tile-note { font-size: var(--step--1); color: var(--ink-soft); }
+.area-tile:hover, .area-tile:focus-visible { border-color: var(--glaze); box-shadow: 0 6px 18px rgba(27, 26, 24, 0.08); }
+.area-tile:hover img { transform: scale(1.03); }
+.area-tile:hover .area-tile-name { text-decoration: underline; text-decoration-color: var(--glaze); }
+@media (prefers-reduced-motion: reduce) { .area-tile img { transition: none; } .area-tile:hover img { transform: none; } }
+
 /* ---- Testimonial ----------------------------------------------------------*/
 .testimonial { border-left: 3px solid var(--glaze); padding-left: 1.5rem; }
 .testimonial p { font-family: var(--font-display); font-size: var(--step-1); font-style: normal; }
