@@ -1,38 +1,67 @@
 ---
 layout: default
-title: "Stoke-on-Trent Property Market Guide | Five Towns Lettings"
-description: 'A local guide to the Stoke-on-Trent property market: the six towns, who each area suits, transport links and rental demand.'
+title: "Letting Agents in Stoke-on-Trent | Five Towns Lettings"
+description: "Family-run Stoke-on-Trent letting agent since 2000, managing 150+ properties for 50+ landlords across all six towns and Newcastle-under-Lyme."
 redirect_from:
 - /cost-of-living-in-stoke-on-trent-what-renters-and-buyers-should-expect-in-2026
 ---
+{% assign c = site.data.company %}{% assign f = site.data.fees %}
 <nav aria-label="Breadcrumb" class="breadcrumbs wrap"><ol><li><a href="/">Home</a></li><li><a href="/areas/">Areas</a></li><li>Stoke-on-Trent</li></ol></nav>
 <section class="section section--tight">
 <div class="wrap">
 <p class="eyebrow">City overview</p>
-<h1>Stoke-on-Trent Property Market Guide</h1>
-<p class="lede" style="max-width:56ch">Stoke-on-Trent is a federation of six towns - Hanley, Burslem, Tunstall, Longton, Fenton and Stoke - each with a distinct property market, plus the surrounding Staffordshire villages and market towns.</p>
+<h1>Letting agents in Stoke-on-Trent</h1>
+<p class="lede" style="max-width:62ch">Stoke-on-Trent is not one town but six: Tunstall, Burslem, Hanley, Stoke, Fenton and Longton, which joined together in 1910 and became a city in 1925. Each has its own character, housing and tenants. Five Towns Lettings is a family-run letting agent that has let property across all six since {{ c.letting_since }}. Today we manage more than {{ c.portfolio.properties }} properties for over {{ c.portfolio.landlords }} landlords, here and in neighbouring Newcastle-under-Lyme.</p>
+<div class="cta-row"><a class="btn btn-primary" href="/landlords/rental-valuation.html">Free Rental Valuation</a><a class="btn btn-outline" href="tel:{{ c.phone_link }}">Call {{ c.phone }}</a></div>
 </div>
 </section>
 <section class="section section--stone">
 <div class="wrap grid-2">
 <div>
-<h2>Property market</h2>
-<p>The city's housing stock is mixed: dense Victorian and Edwardian terraces close to the old pottery works, interwar semis further out, post-war estates, and a growing amount of new-build and city-centre apartment development, particularly around Hanley. Prices remain relatively affordable compared with many other UK cities, which shapes both the buyer and tenant market.</p>
-<h2>Who it suits</h2>
-<p>First-time buyers priced out of nearby cities, buy-to-let investors drawn by relative affordability, and a settled population of long-term local residents across the more residential towns. Rental demand is strongest around the city centre, the universities, and the main hospital sites.</p>
+<h2>Why a local letting agent matters in Stoke-on-Trent</h2>
+<p>Rents and demand can change a lot from one town to the next, and even from street to street. A national agent's pricing tool won't know that a terrace near Longton station lets faster than one a mile away, or that families in Tunstall stay for years. We do, because we have been letting here for over two decades. Most of our tenants come through our own network of tenants and landlords, which keeps empty periods short.</p>
+<h2>Our services for Stoke-on-Trent landlords</h2>
+<ul class="feature-list">
+<li><span><a href="/landlords/property-management.html"><strong>Full property management</strong></a> for {{ f.full_management.inc_vat }} including VAT ({{ f.full_management.ex_vat }}), plus a one-off {{ f.full_management.setup_inc_vat }} set-up fee ({{ f.full_management.setup_ex_vat }}) for a new property: tenants found and referenced, deposits protected with the DPS, two inspections a year, repairs within a limit you set, an out-of-hours emergency line, and rent paid with a statement around five working days after the tenant pays</span></li>
+<li><span><a href="/landlords/let-only.html"><strong>Let only</strong></a> for {{ f.let_only.inc_vat }} including VAT ({{ f.let_only.ex_vat }})</span></li>
+<li><span><a href="/landlords/property-compliance.html"><strong>Landlord compliance</strong></a>: gas safety certificates, EPCs and EICRs arranged for you</span></li>
+<li><span><a href="/landlords/portfolio-management.html"><strong>Portfolio management</strong></a> and <a href="/services/property-sourcing.html"><strong>property sourcing</strong></a> for investors</span></li>
+</ul>
 </div>
 <div>
-<img alt="The Kings Hall in Stoke-on-Trent, a landmark civic building" class="col-photo" decoding="async" loading="lazy" src="/assets/images/kings-hall.jpg"/>
-<h2>Transport</h2>
-<p>Stoke-on-Trent railway station sits on the West Coast Main Line, with direct services toward London, Manchester and Birmingham. The M6 runs along the western edge of the city, and the A50/A500 connect the six towns to each other and to the wider road network.</p>
-<h2>Five Towns services here</h2>
-<p>We provide <a href="/landlords/property-management.html">property management</a> and <a href="/property-investment/">investment advice</a> across all six towns and the surrounding areas - see individual area guides for local detail.</p>
+<img alt="The King's Hall in Stoke, a landmark civic building" class="col-photo" decoding="async" loading="lazy" src="/assets/images/kings-hall.jpg"/>
+<h2>Getting around</h2>
+<p>Stoke-on-Trent station is on the West Coast Main Line, with direct trains to London, Manchester and Birmingham. The A500 links the six towns from north to south, the A50 heads east to Derby, and the M6 runs along the western edge of the city.</p>
+<h2>Beyond the city</h2>
+<p>We also work with landlords in nearby towns and villages, including Stone, Leek, Endon, Alsager and Kidsgrove. If you are not sure we cover your area, just ask.</p>
 </div>
 </div>
 </section>
 <section class="section">
-<div class="wrap">
-<details class="faq-item"><summary>Who manages rental properties in Stoke-on-Trent?</summary><p>A number of local and national letting agents operate across Stoke-on-Trent. Five Towns Lettings is an independent, family-run agency managing property across the city's six towns and surrounding Staffordshire.</p></details>
+<div class="wrap" style="max-width:74ch">
+<h2>The six towns at a glance</h2>
+<div style="overflow-x:auto"><table class="compare-table">
+<thead><tr><th>Town</th><th>Typical housing</th><th>Who rents there</th></tr></thead>
+<tbody>
+<tr><td><a href="/areas/tunstall.html">Tunstall</a></td><td>Victorian terraces, interwar semis</td><td>Local families, long tenancies</td></tr>
+<tr><td><a href="/areas/burslem.html">Burslem</a></td><td>Dense Victorian terraces</td><td>Local couples and families; strong yields</td></tr>
+<tr><td><a href="/areas/hanley.html">Hanley</a></td><td>City-centre apartments, terraces</td><td>Young professionals, students</td></tr>
+<tr><td><a href="/areas/stoke.html">Stoke</a></td><td>Terraces, Penkhull period homes</td><td>Hospital staff, university, commuters</td></tr>
+<tr><td><a href="/areas/fenton.html">Fenton</a></td><td>Terraces, post-war family homes</td><td>Local families; less competition</td></tr>
+<tr><td><a href="/areas/longton.html">Longton</a></td><td>Victorian terraces, Meir semis</td><td>Families, A50 commuters</td></tr>
+<tr><td><a href="/areas/newcastle-under-lyme.html">Newcastle-under-Lyme</a></td><td>Georgian centre to family suburbs</td><td>Families, Keele students and staff</td></tr>
+</tbody></table></div>
 </div>
 </section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who manages rental properties in Stoke-on-Trent?", "acceptedAnswer": {"@type": "Answer", "text": "A number of local and national letting agents operate across Stoke-on-Trent. Five Towns Lettings is an independent, family-run agency managing property across the city's six towns and surrounding Staffordshire."}}]}</script>
+<section class="section section--stone">
+<div class="wrap" style="max-width:74ch">
+<h2>Stoke-on-Trent FAQs</h2>
+<details class="faq-item"><summary>Who manages rental properties in Stoke-on-Trent?</summary><p>Five Towns Lettings is an independent, family-run letting agent managing more than {{ c.portfolio.properties }} properties across Stoke-on-Trent and Newcastle-under-Lyme. We are members of the {{ c.memberships.redress }} and the NRLA, and client money is protected by {{ c.memberships.cmp }}.</p></details>
+<details class="faq-item"><summary>How much do letting agents charge in Stoke-on-Trent?</summary><p>Charges vary between agents. Ours are {{ f.full_management.inc_vat }} including VAT ({{ f.full_management.ex_vat }}), plus a one-off {{ f.full_management.setup_inc_vat }} set-up fee ({{ f.full_management.setup_ex_vat }}) for a new property for full management, and {{ f.let_only.inc_vat }} including VAT ({{ f.let_only.ex_vat }}) for let only. See our <a href="/fees.html">fees</a>.</p></details>
+<details class="faq-item"><summary>How do I find out what my property would rent for?</summary><p>Book a <a href="/landlords/rental-valuation.html">free, no-obligation rental valuation</a> with our local team.</p></details>
+</div>
+</section>
+<section class="section section--glaze center">
+<div class="wrap"><h2>Letting a property in Stoke-on-Trent?</h2><div class="cta-row"><a class="btn btn-primary" href="/landlords/rental-valuation.html">Free Rental Valuation</a><a class="btn btn-outline" href="/tenants/#register">Looking to Rent Here?</a></div></div>
+</section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who manages rental properties in Stoke-on-Trent?", "acceptedAnswer": {"@type": "Answer", "text": "Five Towns Lettings is an independent, family-run letting agent managing more than {{ c.portfolio.properties }} properties across Stoke-on-Trent and Newcastle-under-Lyme. We are members of the {{ c.memberships.redress }} and the NRLA, and client money is protected by {{ c.memberships.cmp }}."}}, {"@type": "Question", "name": "How much do letting agents charge in Stoke-on-Trent?", "acceptedAnswer": {"@type": "Answer", "text": "Charges vary between agents. Ours are {{ f.full_management.inc_vat }} including VAT ({{ f.full_management.ex_vat }}), plus a one-off {{ f.full_management.setup_inc_vat }} set-up fee ({{ f.full_management.setup_ex_vat }}) for a new property for full management, and {{ f.let_only.inc_vat }} including VAT ({{ f.let_only.ex_vat }}) for let only. See our fees."}}, {"@type": "Question", "name": "How do I find out what my property would rent for?", "acceptedAnswer": {"@type": "Answer", "text": "Book a free, no-obligation rental valuation with our local team."}}]}</script>
